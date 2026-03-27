@@ -12,8 +12,8 @@ import img9 from '../../../assets/img9.jpg';
 const projects = [
     {
         id: 1,
-        title: "Skyline Residency",
-        location: "Kolkata, WB",
+        title: "Embee Delight",
+        location: "Siliguri, WB",
         image: img1,
         category: "Luxury Apartments"
     },

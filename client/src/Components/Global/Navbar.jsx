@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import logo from "../../assets/logo.jpg"
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,7 @@ export default function Navbar() {
         <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-accent/20">
             <div className="container px-6 py-4 flex justify-between items-center">
                 <Link to="/" className="text-2xl font-display font-bold text-primary flex items-center gap-2">
-                    <span className="text-accent italic">First</span>Brick
+                    <img src={logo} alt="" className='w-40 rounded-md' />
                 </Link>
 
                 {/* Desktop Nav */}
