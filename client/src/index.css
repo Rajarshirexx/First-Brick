@@ -102,7 +102,7 @@
 
 @theme {
   /* Property Marketing Premium Palette */
-  --color-primary: #1E3A5F;        /* Deep Blue / Professional */
+  --color-primary: #2F5D50;        /* Deep Blue / Professional */
   --color-secondary: #64748B;      /* Slate Gray / Modern Neutral */
   --color-accent: #D4AF37;         /* Gold / Luxury Multi-layer */
   --color-dark: #0F172A;           /* Navy Dark richness */
@@ -163,8 +163,30 @@ h6 {
 .color-card:hover {
   transform: translateY(-8px);
   box-shadow:
-    0 20px 25px -5px rgba(30, 58, 95, 0.1),
-    0 10px 10px -5px rgba(30, 58, 95, 0.08);
+    0 30px 40px -10px rgba(30, 58, 95, 0.15),
+    0 15px 20px -5px rgba(30, 58, 95, 0.1);
+}
+
+.glass-premium {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #D4AF37 0%, #F5E6CA 50%, #C9A34E 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-mesh {
+  background-color: var(--color-primary);
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(213, 52%, 25%, 1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(45, 62%, 53%, 0.15) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(213, 52%, 20%, 1) 0, transparent 50%);
 }
 
 /* Buttons */
