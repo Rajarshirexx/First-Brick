@@ -101,17 +101,26 @@
 }
 
 @theme {
-  /* Property Marketing Premium Palette */
-  --color-primary: #2F5D50;        /* Deep Blue / Professional */
-  --color-secondary: #64748B;      /* Slate Gray / Modern Neutral */
-  --color-accent: #D4AF37;         /* Gold / Luxury Multi-layer */
-  --color-dark: #0F172A;           /* Navy Dark richness */
-  --color-muted: #475569;          /* Muted Slate Text */
+  /* Updated Property Marketing Palette (Terracotta & Navy) */
+  --color-primary: #2C364A;        /* Deep Navy / Brand Base */
+  --color-secondary: #C17053;      /* Terracotta / Modern Accent */
+  --color-accent: #D33502;         /* Bold Rust / High-impact */
+  --color-dark: #B73F18;           /* Burnt Sienna */
+  --color-muted: #59606D;          /* Muted Slate Text */
+  --color-neutral: #A1A8B2;        /* Blue-Gray Neutral */
+  --color-peach: #FED6BF;          /* Soft Peach Accent */
+  --color-bg: #F3F6F7;             /* Clean Light Background */
+  --color-text: #2C364A;           /* Navy Gray for Text */
 
-  /* Neutrals */
-  --color-bg: #F8FAFC;             /* Off White Page Background */
-  --color-light: #FFFFFF;
-  --color-text: #111827;           /* Charcoal / Readable */
+  /* Raw Hex Variables (Reference) */
+  --hex-d33502: #D33502;
+  --hex-2c364a: #2C364A;
+  --hex-f3f6f7: #F3F6F7;
+  --hex-c17053: #C17053;
+  --hex-a1a8b2: #A1A8B2;
+  --hex-fed6bf: #FED6BF;
+  --hex-b73f18: #B73F18;
+  --hex-59606d: #59606D;
 
   /* Typography */
   --font-sans: "Inter", system-ui, sans-serif;
