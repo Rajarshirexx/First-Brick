@@ -27,10 +27,16 @@ export default function Footer() {
                     <div>
                         <h4 className="text-lg font-display font-semibold mb-4 text-accent">Contact</h4>
                         <ul className="flex flex-col gap-2 text-slate-300">
-                            <li>123 Property Lane</li>
                             <li>Marketing City, MC 12345</li>
-                            <li>+1 234 567 890</li>
-                            <li>hello@firstbrick.com</li>
+                            <li>
+                                <a href="tel:+918371874510" className="hover:text-accent transition-colors">+91 83718 74510</a>
+                            </li>
+                            <li>
+                                <a href="tel:+917001820374" className="hover:text-accent transition-colors">+91 70018 20374</a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@firstbrickproperty.com" className="hover:text-accent transition-colors">info@firstbrickproperty.com</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
