@@ -52,15 +52,15 @@ export default function HeroSection() {
                         </button>
                     </div>
 
-                    {/* Stats Summary */}
-                    <div className="mt-12 flex justify-center lg:justify-start gap-10 opacity-60 animate-fadeIn delay-700">
-                        <div className="flex flex-col">
-                            <span className="text-xl font-bold text-white">500+</span>
-                            <span className="text-[10px] uppercase tracking-widest text-slate-400">Marketed</span>
+                    {/* Branding Detail */}
+                    <div className="mt-12 flex justify-center lg:justify-start gap-10 animate-fadeIn delay-700">
+                        <div className="flex items-center gap-3">
+                            <span className="w-1.5 h-1.5 bg-accent rounded-full"></span>
+                            <span className="text-[10px] uppercase tracking-[0.3em] text-slate-400 font-bold">Boutique Agency</span>
                         </div>
-                        <div className="flex flex-col">
-                            <span className="text-xl font-bold text-white">15+</span>
-                            <span className="text-[10px] uppercase tracking-widest text-slate-400">Years Exp</span>
+                        <div className="flex items-center gap-3">
+                            <span className="w-1.5 h-1.5 bg-accent rounded-full"></span>
+                            <span className="text-[10px] uppercase tracking-[0.3em] text-slate-400 font-bold">Strategic Sales</span>
                         </div>
                     </div>
                 </div>
