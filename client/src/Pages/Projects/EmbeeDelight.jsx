@@ -154,6 +154,35 @@ export default function EmbeeDelight() {
                     {/* Sidebar / CTA */}
                     <div className="lg:col-span-5 space-y-10 animate-fadeIn delay-300">
                         
+                        {/* Vertical Elevation Showcase */}
+                        <div className="rounded-2xl overflow-hidden shadow-2xl relative group aspect-[4/5]">
+                            <img 
+                                src={brochurePage10} 
+                                alt="Building Elevation" 
+                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                            />
+                            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary p-8">
+                                <span className="text-secondary font-display italic text-xl">Architectural Mastery</span>
+                                <h4 className="text-white font-bold text-sm uppercase tracking-widest mt-1">Premium G+10 Structure</h4>
+                            </div>
+                        </div>
+
+                        {/* Key Highlights Grid */}
+                        <div className="grid grid-cols-2 gap-4">
+                            {[
+                                { icon: "✅", title: "RERA Approved", subtitle: "HIRA/P/DAR/2019/00010" },
+                                { icon: "🏘️", title: "Gated Community", subtitle: "Secure Environment" },
+                                { icon: "🧭", title: "Vaastu Compliant", subtitle: "Harmonious Living" },
+                                { icon: "🛡️", title: "24/7 Security", subtitle: "Multi-Tier Protection" }
+                            ].map((item, i) => (
+                                <div key={i} className="bg-white p-6 rounded-2xl border border-primary/5 shadow-sm hover:shadow-md transition-all">
+                                    <div className="text-2xl mb-3">{item.icon}</div>
+                                    <div className="text-primary font-bold text-[10px] uppercase tracking-widest mb-1">{item.title}</div>
+                                    <div className="text-primary/40 text-[9px] font-bold uppercase">{item.subtitle}</div>
+                                </div>
+                            ))}
+                        </div>
+                        
                         {/* Download Portal */}
                         <div className="bg-primary p-12 rounded-2xl text-white shadow-2xl relative overflow-hidden group">
                             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
