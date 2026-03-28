@@ -8,13 +8,14 @@ import img5 from '../../../assets/img5.jpg';
 import img7 from '../../../assets/img7.jpg';
 import img8 from '../../../assets/img8.jpg';
 import img9 from '../../../assets/img9.jpg';
+import embeeImg from '../../../assets/embee.png';
 
 const projects = [
     {
-        id: 1,
+        id: "embee-delight",
         title: "Embee Delight",
         location: "Siliguri, WB",
-        image: img1,
+        image: embeeImg,
         category: "Luxury Apartments"
     },
     {

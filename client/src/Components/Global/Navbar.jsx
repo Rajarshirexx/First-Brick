@@ -5,17 +5,21 @@ import logo from "../../assets/logo.jpg"
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [isAboutOpen, setIsAboutOpen] = useState(false);
+    const [isProjectsOpen, setIsProjectsOpen] = useState(false);
 
     const navLinks = [
         { name: 'Home', path: '/' },
-        // About is handled separately as a dropdown
-        { name: 'Projects', path: '/projects' },
         { name: 'Contact', path: '/contact' },
     ];
 
     const aboutLinks = [
         { name: 'About Us', path: '/about' },
         { name: 'Company Directors', path: '/about/directors' },
+    ];
+
+    const projectLinks = [
+        { name: 'All Projects', path: '/projects' },
+        { name: 'Embee Delight', path: '/projects/embee-delight' },
     ];
 
     return (
@@ -67,14 +71,37 @@ export default function Navbar() {
                         </div>
                     </div>
 
-                    <NavLink
-                        to="/projects"
-                        className={({ isActive }) =>
-                            `text-sm font-semibold transition-colors hover:text-accent ${isActive ? 'text-accent border-b-2 border-accent' : 'text-primary'}`
-                        }
+                    {/* Projects Dropdown */}
+                    <div 
+                        className="relative group"
+                        onMouseEnter={() => setIsProjectsOpen(true)}
+                        onMouseLeave={() => setIsProjectsOpen(false)}
                     >
-                        Projects
-                    </NavLink>
+                        <button 
+                            className={`text-sm font-semibold transition-colors flex items-center gap-1 py-2 ${isProjectsOpen ? 'text-accent' : 'text-primary'}`}
+                        >
+                            Projects
+                            <svg className={`w-4 h-4 transition-transform duration-300 ${isProjectsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        
+                        {/* Dropdown Menu */}
+                        <div className={`absolute top-full left-1/2 -translate-x-1/2 w-48 bg-white shadow-2xl rounded-xl border border-primary/5 py-4 transition-all duration-300 origin-top ${isProjectsOpen ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible'}`}>
+                            {projectLinks.map((subLink) => (
+                                <NavLink
+                                    key={subLink.name}
+                                    to={subLink.path}
+                                    className={({ isActive }) =>
+                                        `block px-6 py-2 text-xs font-bold uppercase tracking-widest transition-colors hover:bg-secondary/5 ${isActive ? 'text-secondary' : 'text-primary/70'}`
+                                    }
+                                >
+                                    {subLink.name}
+                                </NavLink>
+                            ))}
+                        </div>
+                    </div>
+
                     <NavLink
                         to="/contact"
                         className={({ isActive }) =>
@@ -137,13 +164,33 @@ export default function Navbar() {
                             )}
                         </div>
 
-                        <NavLink
-                            to="/projects"
-                            onClick={() => setIsOpen(false)}
-                            className={({ isActive }) => `text-xl font-display font-bold ${isActive ? 'text-accent' : 'text-primary'}`}
-                        >
-                            Projects
-                        </NavLink>
+                        {/* Mobile Projects Dropdown */}
+                        <div className="flex flex-col gap-4">
+                            <button 
+                                onClick={() => setIsProjectsOpen(!isProjectsOpen)}
+                                className={`text-xl font-display font-bold flex justify-between items-center ${isProjectsOpen ? 'text-accent' : 'text-primary'}`}
+                            >
+                                Projects
+                                <svg className={`w-6 h-6 transform ${isProjectsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            {isProjectsOpen && (
+                                <div className="flex flex-col gap-4 pl-4 border-l-2 border-primary/5 animate-fadeIn">
+                                    {projectLinks.map((subLink) => (
+                                        <NavLink
+                                            key={subLink.name}
+                                            to={subLink.path}
+                                            onClick={() => { setIsOpen(false); setIsProjectsOpen(false); }}
+                                            className={({ isActive }) => `text-sm font-semibold uppercase tracking-widest ${isActive ? 'text-secondary font-black' : 'text-primary/60'}`}
+                                        >
+                                            {subLink.name}
+                                        </NavLink>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+
                         <NavLink
                             to="/contact"
                             onClick={() => setIsOpen(false)}
