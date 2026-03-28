@@ -17,6 +17,18 @@ export default function AboutSection() {
                         />
                         <div className="absolute inset-0 bg-primary/5"></div>
                     </div>
+                </div>
+
+                {/* Content Side */}
+                <div className="flex-1 text-center lg:text-left">
+                    <div className="inline-block px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-primary text-[10px] uppercase tracking-[0.2em] font-bold mb-8">
+                        Our Heritage
+                    </div>
+                    
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary leading-tight mb-8">
+                        Elevating Property <br />
+                        <span className="text-secondary">Marketing</span> Standards.
+                    </h2>
                     
                     <p className="text-lg text-muted mb-10 leading-relaxed font-light">
                         At <span className="font-bold text-primary italic">FirstBrick</span>, we don't just market properties; we craft premium digital narratives. 
