@@ -1,53 +1,68 @@
 import React from 'react';
 import brochurePdf from '../../assets/EMBEE_DELIGHT_BROCHURE.pdf';
-import projectHero from '../../assets/embee.png';
-import projectDetail1 from '../../assets/img2.jpg';
-import projectDetail2 from '../../assets/img5.jpg';
+import brochurePage1 from '../../assets/embee/EMBEE_DELIGHT_BROCHURE_page-0001.jpg';
+import brochurePage3 from '../../assets/embee/EMBEE_DELIGHT_BROCHURE_page-0003.jpg';
+import brochurePage6 from '../../assets/embee/EMBEE_DELIGHT_BROCHURE_page-0006.jpg';
+import brochurePage8 from '../../assets/embee/EMBEE_DELIGHT_BROCHURE_page-0008.jpg';
+import brochurePage10 from '../../assets/embee/EMBEE_DELIGHT_BROCHURE_page-0010.jpg';
+import brochurePage12 from '../../assets/embee/EMBEE_DELIGHT_BROCHURE_page-0012.jpg';
 
 export default function EmbeeDelight() {
     const amenities = [
+        { title: "Swimming Pool", icon: "🏊" },
+        { title: "Squash Court", icon: "🎾" },
+        { title: "AC Community Hall", icon: "🏛️" },
+        { title: "20,000 sqft Clubhouse", icon: "🏠" },
         { title: "Power Backup", icon: "⚡" },
-        { title: "24/7 Security", icon: "🛡️" },
-        { title: "Elevated Living", icon: "🏢" },
-        { title: "Landscaped Gardens", icon: "🌳" },
-        { title: "Premium Fittings", icon: "💎" },
-        { title: "Parking Space", icon: "🚗" }
+        { title: "24/7 Security", icon: "🛡️" }
     ];
 
     return (
         <div className="bg-bg min-h-screen">
             
-            {/* Hero Segment */}
-            <div className="relative h-[70vh] flex items-center overflow-hidden">
-                <div className="absolute inset-0">
-                    <img 
-                        src={projectHero} 
-                        alt="Embee Delight Hero" 
-                        className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/20"></div>
-                </div>
-                
+            {/* Branded Header Segment (Solid) */}
+            <div className="relative h-[65vh] flex items-center bg-primary overflow-hidden py-20">
                 <div className="container px-6 relative z-10 animate-fadeIn">
-                    <div className="max-w-3xl">
-                        <div className="text-secondary font-bold text-[10px] uppercase tracking-[0.4em] mb-4">
+                    <div className="max-w-4xl">
+                        <div className="text-secondary font-bold text-[10px] uppercase tracking-[0.4em] mb-6">
                             Featured Project
                         </div>
-                        <h1 className="text-6xl md:text-8xl font-display font-bold text-white mb-8 leading-none">
+                        <h1 className="text-7xl md:text-9xl font-display font-bold text-white mb-8 leading-none">
                             Embee <br />
-                            <span className="italic font-light text-secondary text-5xl md:text-7xl">Delight</span>.
+                            <span className="italic font-light text-secondary text-6xl md:text-8xl">Delight</span>.
                         </h1>
-                        <div className="flex flex-wrap gap-6 mb-8 text-white/80 font-medium">
-                            <div className="flex items-center gap-2">
-                                <span className="text-secondary">📍</span> Siliguri, India
+                        <div className="flex flex-wrap gap-8 text-white/80 font-medium">
+                            <div className="flex items-center gap-3">
+                                <span className="text-secondary text-xl">📍</span> Siliguri, India
                             </div>
-                            <div className="flex items-center gap-2 border-l border-white/20 pl-6">
-                                <span className="text-secondary">🏢</span> Residential Luxury
+                            <div className="flex items-center gap-3 border-l border-white/20 pl-8">
+                                <span className="text-secondary text-xl">🏢</span> Residential Luxury
                             </div>
-                            <div className="flex items-center gap-2 border-l border-white/20 pl-6">
-                                <span className="text-secondary">✨</span> Ready to Move
+                            <div className="flex items-center gap-3 border-l border-white/20 pl-8">
+                                <span className="text-secondary text-xl">✨</span> Ready to Move
                             </div>
                         </div>
+                    </div>
+                </div>
+                
+                {/* Decorative Element */}
+                <div className="absolute right-0 bottom-0 top-0 w-1/3 bg-white/5 skew-x-[-15deg] translate-x-1/2"></div>
+            </div>
+
+            {/* Aerial Showcase Section */}
+            <div className="relative group overflow-hidden">
+                <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all duration-700 z-10"></div>
+                <img 
+                    src={brochurePage6} 
+                    alt="Embee Delight Aerial View" 
+                    className="w-full h-auto object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                />
+                <div className="absolute bottom-10 left-10 z-20">
+                    <div className="bg-white/90 backdrop-blur-md p-8 border-l-4 border-secondary shadow-2xl skew-x-[-5deg]">
+                        <h3 className="text-primary font-display font-bold text-3xl uppercase tracking-tighter skew-x-[5deg]">
+                            Nestled in the <br />
+                            <span className="text-secondary italic">Lap of Nature</span>
+                        </h3>
                     </div>
                 </div>
             </div>
@@ -59,21 +74,70 @@ export default function EmbeeDelight() {
                     <div className="lg:col-span-7 space-y-12 animate-fadeIn">
                         <div className="space-y-6">
                             <h2 className="text-3xl md:text-4xl font-display font-bold text-primary">Architectural Excellence</h2>
-                            <p className="text-muted text-lg leading-relaxed font-medium">
-                                Embee Delight stands as a beacon of modern residential architecture in Siliguri. 
-                                Designed for those who seek a blend of comfort and class, this project offers 
-                                meticulously crafted living spaces that redefine urban living standards.
+                            <p className="text-muted text-lg leading-relaxed font-medium italic">
+                                Embee Builders and Manakamna Builders are one of the leading and fastest growing realestate developers in entire North Bengal.
                             </p>
                             <p className="text-muted text-lg leading-relaxed font-medium">
-                                With a focus on natural light, cross-ventilation, and premium material selection, 
-                                every corner of Embee Delight reflects the FirstBrick commitment to quality 
-                                and excellence in property marketing and development.
+                                We have begun developing a large multi-storied residential complex in North Bengal. 
+                                After a record performance of its project Embee Fortune, we have now come up with a project named 
+                                “EMBEE DELIGHT”, on Asian Highway, 50 meters from Embee Fortune.
+                            </p>
+                            <p className="text-muted text-lg leading-relaxed font-medium">
+                                The project is a residential project which will be having 530 flats, consisting basically 3BHK (Spacious), 
+                                3 BHK (Normal) and 2 BHK flats. Embee Delight, is a G+10 floor project, and consists of total 6 blocks. 
+                                The project will be providing all kinds of Luxurious amenities including Swimming Pool, Squash Court, 
+                                AC Community Hall and many more which will make living comfortable and fun. We have added 3BHK (Spacious) 
+                                in addition to the existing sizes of flats available at Embee Fortune, to cater to certain customers who wanted bigger flats.
+                            </p>
+                            <p className="text-muted text-lg leading-relaxed font-medium">
+                                The project is divided into 2 phases- Phase-I (170 flats) and Phase-II (360 flats). 
+                                One of the blocks shall be a dedicated clubhouse of 20000 sqft, which will be one of biggest clubhouse of its kind in entire North Bengal.
+                            </p>
+                        </div>
+
+                        {/* Regional Gateway Connectivity */}
+                        <div className="pt-12 border-t border-primary/5">
+                            <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary/50 mb-10">Regional Connectivity</h3>
+                            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                                {[
+                                    { place: "Mirik", dist: "47 KM" },
+                                    { place: "Darjeeling", dist: "64 KM" },
+                                    { place: "Kalimpong", dist: "68 KM" },
+                                    { place: "Gangtok", dist: "116 KM" },
+                                    { place: "Dooars", dist: "67 KM" }
+                                ].map((item, i) => (
+                                    <div key={i} className="bg-white p-4 rounded-xl border border-primary/5 text-center shadow-sm">
+                                        <div className="text-secondary font-bold text-lg mb-1">{item.dist}</div>
+                                        <div className="text-primary font-bold text-[10px] uppercase tracking-wider">{item.place}</div>
+                                    </div>
+                                ))}
+                            </div>
+                            <p className="mt-8 text-primary/60 text-sm font-medium italic">
+                                *Siliguri: The Gateway of North East India - Flanked by beautiful destinations with unique charm.
                             </p>
                         </div>
 
                         {/* Amenities Grid */}
                         <div className="pt-12 border-t border-primary/5">
-                            <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary/50 mb-10">Premium Amenities</h3>
+                            <div className="flex justify-between items-end mb-10">
+                                <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary/50">Premium Amenities</h3>
+                                <span className="text-secondary font-display italic text-xl">World-Class Facilities</span>
+                            </div>
+                            
+                            {/* Visual Amenities Highlight */}
+                            <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl relative group">
+                                <img 
+                                    src={brochurePage8} 
+                                    alt="Outdoor Amenities" 
+                                    className="w-full h-auto object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                                    <p className="text-white text-sm font-medium">
+                                        Cricket Pitch, Kids Play Area, and Multipurpose Court - Designed for an active lifestyle.
+                                    </p>
+                                </div>
+                            </div>
+
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                                 {amenities.map((item, i) => (
                                     <div key={i} className="flex flex-col items-center text-center group cursor-default">
@@ -103,6 +167,7 @@ export default function EmbeeDelight() {
                             
                             <a 
                                 href={brochurePdf} 
+                                download="EMBEE_DELIGHT_BROCHURE.pdf"
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center w-full bg-secondary text-white font-display font-bold uppercase tracking-[0.3em] py-5 rounded-xl hover:bg-white hover:text-primary transition-all duration-500 shadow-xl relative z-10"
@@ -137,26 +202,52 @@ export default function EmbeeDelight() {
                     </div>
                 </div>
 
-                {/* Secondary Imagery */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-32">
-                    <div className="aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl relative group">
-                        <img 
-                            src={projectDetail1} 
-                            alt="Interior Detail" 
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+                {/* Visual Brochure Journey */}
+                <div className="mt-32 pt-24 border-t border-primary/10">
+                    <div className="text-center max-w-2xl mx-auto mb-16">
+                        <h2 className="text-3xl md:text-5xl font-display font-bold text-primary mb-6">Visual Brochure Journey</h2>
+                        <p className="text-muted font-medium">
+                            Experience the complete vision of Embee Delight through a curated selection of our official property brochure.
+                        </p>
                     </div>
-                    <div className="aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl relative group">
-                        <img 
-                            src={projectDetail2} 
-                            alt="Landscape View" 
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {[brochurePage1, brochurePage10, brochurePage12].map((img, i) => (
+                            <a 
+                                key={i} 
+                                href={img}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative aspect-[3/4] overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer block"
+                            >
+                                <img 
+                                    src={img} 
+                                    alt={`Brochure Page ${i+1}`} 
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                />
+                                <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                                    <span className="text-white font-bold text-xs uppercase tracking-[0.2em] border border-white/40 px-6 py-3 rounded-full backdrop-blur-sm">
+                                        View Detail
+                                    </span>
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+
+                    <div className="mt-16 text-center">
+                        <p className="text-primary/40 text-sm font-bold uppercase tracking-[0.4em] mb-8">Official Documentation</p>
+                        <a 
+                            href={brochurePdf} 
+                            download="EMBEE_DELIGHT_BROCHURE.pdf"
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-4 bg-primary text-white px-10 py-5 rounded-full font-bold hover:bg-secondary transition-all shadow-xl hover:-translate-y-1"
+                        >
+                            <span>Download Full PDF Brochure</span>
+                            <span className="text-xl">📄</span>
+                        </a>
                     </div>
                 </div>
-
             </div>
         </div>
     );
