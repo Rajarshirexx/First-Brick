@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiPhone } from 'react-icons/fi';
 import brochurePdf from '../../assets/SKYDALE E-BROCHURE REVISED.pdf';
 import brochurePage1 from '../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0001.jpg';
 import brochurePage2 from '../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0002.jpg';
@@ -194,9 +195,17 @@ export default function Skydale() {
                                 download="SKYDALE_E_BROCHURE.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center bg-secondary w-full py-4 rounded-xl font-bold uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-[#083333] transition-all duration-300 shadow-lg"
+                                className="inline-flex items-center justify-center bg-secondary w-full py-4 rounded-xl font-bold uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-[#083333] transition-all duration-300 shadow-lg mb-4"
                             >
                                 Download E-Brochure
+                            </a>
+                            <a 
+                                href="https://wa.me/918371874510" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center bg-[#25D366] w-full py-4 rounded-xl font-bold uppercase tracking-[0.2em] text-xs text-white hover:bg-[#20bd5c] transition-all duration-300 shadow-lg gap-2"
+                            >
+                                <span className="text-xl">📞</span> WhatsApp Inquiry
                             </a>
                         </div>
                     </div>

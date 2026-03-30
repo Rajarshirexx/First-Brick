@@ -179,7 +179,7 @@ export default function RightAngle() {
                             Inquire for Leasing <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
                         </Link>
                         <a 
-                            href="https://wa.me/91XXXXXXXXXX" 
+                            href="https://wa.me/918371874510" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="bg-[#25D366] hover:bg-[#20bd5c] text-white px-10 py-5 rounded-full font-bold text-lg transition-all shadow-xl shadow-[#25D366]/20 flex items-center gap-3"

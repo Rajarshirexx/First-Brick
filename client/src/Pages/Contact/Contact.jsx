@@ -118,10 +118,24 @@ export default function Contact() {
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4 group">
+                                    <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0 text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-300 font-bold border border-secondary/20 shadow-sm shadow-secondary/5">
+                                        WA
+                                    </div>
+                                    <div className="space-y-1">
+                                        <p className="text-primary/40 text-[10px] uppercase font-bold tracking-widest mb-1">WhatsApp Inquiry</p>
+                                        <a href="https://wa.me/918371874510" target="_blank" rel="noopener noreferrer" className="text-primary font-bold hover:text-secondary transition-colors inline-block">
+                                            +91 83718 74510
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-4 group">
                                     <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0 text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-300">
                                         <span className="text-xl">✉️</span>
                                     </div>
-                                    <p className="text-primary font-bold">official@firstbrickproperties.in</p>
+                                    <div className="space-y-1">
+                                        <p className="text-primary/40 text-[10px] uppercase font-bold tracking-widest mb-1">Email Address</p>
+                                        <p className="text-primary font-bold">official@firstbrickproperties.in</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
