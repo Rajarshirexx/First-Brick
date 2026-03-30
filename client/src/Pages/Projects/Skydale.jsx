@@ -1,4 +1,5 @@
 import React from 'react';
+import brochurePdf from '../../assets/SKYDALE E-BROCHURE REVISED.pdf';
 import brochurePage1 from '../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0001.jpg';
 import brochurePage2 from '../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0002.jpg';
 import brochurePage3 from '../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0003.jpg';
@@ -188,9 +189,15 @@ export default function Skydale() {
                             </div>
                             <h3 className="text-2xl font-display font-bold mb-4">Brochure</h3>
                             <p className="text-white/60 mb-8 text-sm">Download the technical blueprint of Skydale.</p>
-                            <button className="bg-secondary w-full py-4 rounded-xl font-bold uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-[#083333] transition-all duration-300">
+                            <a 
+                                href={brochurePdf}
+                                download="SKYDALE_E_BROCHURE.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center bg-secondary w-full py-4 rounded-xl font-bold uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-[#083333] transition-all duration-300 shadow-lg"
+                            >
                                 Download E-Brochure
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
