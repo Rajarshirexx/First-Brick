@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ProjectCard from '../../Components/UI/ProjectCard';
+import ProjectCard from '../../../Components/UI/ProjectCard';
 
 // Import project images
 import img1 from '../../../assets/img1.jpg';
