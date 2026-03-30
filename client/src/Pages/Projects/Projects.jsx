@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import project1 from '../../assets/embee.png';
+import skydaleCover from '../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0001.jpg';
 
 export default function Projects() {
     const projects = [
@@ -11,6 +12,14 @@ export default function Projects() {
             category: "Residential Luxury",
             image: project1,
             description: "A beacon of modern residential architecture redefining urban living standards."
+        },
+        {
+            id: "skydale",
+            name: "Skydale",
+            location: "Siliguri, India",
+            category: "Ultra-Luxury Residential",
+            image: skydaleCover,
+            description: "Siliguri's tallest residential towers, soaring into the elite skies of North Bengal."
         }
     ];
 

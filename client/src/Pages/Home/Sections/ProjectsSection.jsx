@@ -9,6 +9,7 @@ import img7 from '../../../assets/img7.jpg';
 import img8 from '../../../assets/img8.jpg';
 import img9 from '../../../assets/img9.jpg';
 import embeeImg from '../../../assets/embee.png';
+import skydaleImg from '../../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0001.jpg';
 
 const projects = [
     {
@@ -17,6 +18,13 @@ const projects = [
         location: "Siliguri, WB",
         image: embeeImg,
         category: "Luxury Apartments"
+    },
+    {
+        id: "skydale",
+        title: "Skydale",
+        location: "Siliguri, WB",
+        image: skydaleImg,
+        category: "Ultra-Luxury Towers"
     },
     {
         id: 2,
