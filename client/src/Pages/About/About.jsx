@@ -1,4 +1,5 @@
 import React from 'react';
+import aboutImg from '../../assets/img3.jpg';
 
 export default function About() {
     return (
@@ -22,13 +23,16 @@ export default function About() {
                 {/* Our Story / Heritage Section */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-32">
                     <div className="relative group animate-fadeIn">
-                        <div className="aspect-square bg-primary/5 rounded-2xl overflow-hidden relative border border-primary/5">
-                             <div className="absolute inset-0 flex items-center justify-center text-primary/10 font-display font-black text-[10rem] select-none">
-                                FB
-                            </div>
-                            <div className="absolute bottom-12 right-12 text-secondary font-display font-bold text-2xl uppercase tracking-widest text-right">
+                        <div className="aspect-square rounded-2xl overflow-hidden relative border border-primary/5 shadow-2xl">
+                             <img 
+                                src={aboutImg} 
+                                alt="FirstBrick Excellence" 
+                                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                             />
+                             <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-700"></div>
+                             <div className="absolute bottom-12 right-12 text-accent font-display font-bold text-2xl uppercase tracking-widest text-right animate-fadeIn">
                                 Excellence in <br />
-                                <span className="text-primary italic">Innovation</span>
+                                <span className="text-accent/80 italic text-xl">Innovation</span>
                             </div>
                         </div>
                         {/* Decorative floating detail */}
