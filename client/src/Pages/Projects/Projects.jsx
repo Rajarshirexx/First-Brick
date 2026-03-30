@@ -5,6 +5,7 @@ import project1 from '../../assets/embee.png';
 import skydaleCover from '../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0001.jpg';
 import utsodharaCover from '../../assets/utsodhara/Utsodhaara-Brochure_page-0001.jpg';
 import rightAngleCover from '../../assets/RIGHT ANGLE BROCHURE/RIGHT ANGLE BROCHURE V2_page-0001.jpg';
+import sensesCover from '../../assets/senses/The SENSES_page-0001.jpg';
 
 export default function Projects() {
     const projects = [
@@ -39,6 +40,14 @@ export default function Projects() {
             category: "Commercial / Retail",
             image: rightAngleCover,
             description: "The perfect intersection of ambition and lifestyle. A landmark commercial destination."
+        },
+        {
+            id: "the-senses",
+            name: "The Senses",
+            location: "Siliguri, India",
+            category: "Premium Residential",
+            image: sensesCover,
+            description: "A rainbow of infinite hues. A 7.4-acre residential sanctuary with 60% open space."
         }
     ];
 

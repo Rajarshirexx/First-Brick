@@ -13,6 +13,7 @@ import embeeImg from '../../../assets/embee.png';
 import skydaleImg from '../../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0001.jpg';
 import utsodharaImg from '../../../assets/utsodhara/Utsodhaara-Brochure_page-0001.jpg';
 import rightAngleImg from '../../../assets/RIGHT ANGLE BROCHURE/RIGHT ANGLE BROCHURE V2_page-0001.jpg';
+import sensesImg from '../../../assets/senses/The SENSES_page-0001.jpg';
 
 const projects = [
     {
@@ -48,20 +49,12 @@ const projects = [
         description: "The perfect intersection of ambition and lifestyle. A landmark commercial destination."
     },
     {
-        id: 2,
-        name: "The Heritage Villa",
+        id: "the-senses",
+        name: "The Senses",
         location: "Siliguri, WB",
-        image: img5,
-        category: "Boutique Living",
-        description: "A sanctuary of historical charm and contemporary luxury."
-    },
-    {
-        id: 3,
-        name: "Urban Square",
-        location: "New Town, Kolkata",
-        image: img7,
-        category: "Commercial Hub",
-        description: "The nexus of modern business and lifestyle in the heart of New Town."
+        image: sensesImg,
+        category: "Premium Residential",
+        description: "A rainbow of infinite hues. A 7.4-acre residential sanctuary with 60% open space."
     }
 ];
 
