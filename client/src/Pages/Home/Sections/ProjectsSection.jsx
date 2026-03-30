@@ -12,6 +12,7 @@ import img9 from '../../../assets/img9.jpg';
 import embeeImg from '../../../assets/embee.png';
 import skydaleImg from '../../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0001.jpg';
 import utsodharaImg from '../../../assets/utsodhara/Utsodhaara-Brochure_page-0001.jpg';
+import rightAngleImg from '../../../assets/RIGHT ANGLE BROCHURE/RIGHT ANGLE BROCHURE V2_page-0001.jpg';
 
 const projects = [
     {
@@ -37,6 +38,14 @@ const projects = [
         image: utsodharaImg,
         category: "Integrated Township",
         description: "An 81-acre sustainable ecosystem redefining modern town planning."
+    },
+    {
+        id: "right-angle",
+        name: "Right Angle",
+        location: "Siliguri, WB",
+        image: rightAngleImg,
+        category: "Commercial/Retail",
+        description: "The perfect intersection of ambition and lifestyle. A landmark commercial destination."
     },
     {
         id: 2,

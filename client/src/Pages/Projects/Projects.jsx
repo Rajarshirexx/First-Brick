@@ -4,6 +4,7 @@ import ProjectCard from '../../Components/UI/ProjectCard';
 import project1 from '../../assets/embee.png';
 import skydaleCover from '../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0001.jpg';
 import utsodharaCover from '../../assets/utsodhara/Utsodhaara-Brochure_page-0001.jpg';
+import rightAngleCover from '../../assets/RIGHT ANGLE BROCHURE/RIGHT ANGLE BROCHURE V2_page-0001.jpg';
 
 export default function Projects() {
     const projects = [
@@ -30,6 +31,14 @@ export default function Projects() {
             category: "Integrated Township",
             image: utsodharaCover,
             description: "An 81-acre sustainable ecosystem redefining modern town planning."
+        },
+        {
+            id: "right-angle",
+            name: "Right Angle",
+            location: "Siliguri, India",
+            category: "Commercial / Retail",
+            image: rightAngleCover,
+            description: "The perfect intersection of ambition and lifestyle. A landmark commercial destination."
         }
     ];
 

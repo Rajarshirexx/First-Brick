@@ -10,6 +10,7 @@ import Projects from './Pages/Projects/Projects';
 import EmbeeDelight from './Pages/Projects/EmbeeDelight';
 import Skydale from './Pages/Projects/Skydale';
 import Utsodhara from './Pages/Projects/Utsodhara';
+import RightAngle from './Pages/Projects/RightAngle';
 import Contact from './Pages/Contact/Contact';
 import './App.css';
 
@@ -28,6 +29,7 @@ function App() {
             <Route path="/projects/embee-delight" element={<EmbeeDelight />} />
             <Route path="/projects/skydale" element={<Skydale />} />
             <Route path="/projects/utsodhara" element={<Utsodhara />} />
+            <Route path="/projects/right-angle" element={<RightAngle />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
