@@ -11,6 +11,7 @@ import img8 from '../../../assets/img8.jpg';
 import img9 from '../../../assets/img9.jpg';
 import embeeImg from '../../../assets/embee.png';
 import skydaleImg from '../../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0001.jpg';
+import utsodharaImg from '../../../assets/utsodhara/Utsodhaara-Brochure_page-0001.jpg';
 
 const projects = [
     {
@@ -28,6 +29,14 @@ const projects = [
         image: skydaleImg,
         category: "Ultra-Luxury Towers",
         description: "Siliguri's tallest residential towers, soaring into the elite skies of North Bengal."
+    },
+    {
+        id: "utsodhara",
+        name: "Utsodhaara",
+        location: "Siliguri, WB",
+        image: utsodharaImg,
+        category: "Integrated Township",
+        description: "An 81-acre sustainable ecosystem redefining modern town planning."
     },
     {
         id: 2,

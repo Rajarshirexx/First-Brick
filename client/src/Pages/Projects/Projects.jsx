@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import ProjectCard from '../../Components/UI/ProjectCard';
 import project1 from '../../assets/embee.png';
 import skydaleCover from '../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0001.jpg';
+import utsodharaCover from '../../assets/utsodhara/Utsodhaara-Brochure_page-0001.jpg';
 
 export default function Projects() {
     const projects = [
@@ -21,6 +22,14 @@ export default function Projects() {
             category: "Ultra-Luxury Residential",
             image: skydaleCover,
             description: "Siliguri's tallest residential towers, soaring into the elite skies of North Bengal."
+        },
+        {
+            id: "utsodhara",
+            name: "Utsodhaara",
+            location: "Siliguri, India",
+            category: "Integrated Township",
+            image: utsodharaCover,
+            description: "An 81-acre sustainable ecosystem redefining modern town planning."
         }
     ];
 
