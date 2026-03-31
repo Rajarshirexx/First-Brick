@@ -134,7 +134,7 @@ export default function Contact() {
                                     </div>
                                     <div className="space-y-1">
                                         <p className="text-primary/40 text-[10px] uppercase font-bold tracking-widest mb-1">Email Address</p>
-                                        <p className="text-primary font-bold">official@firstbrickproperties.in</p>
+                                        <a href="mailto:info@firstbrickproperty.com" className="text-primary font-bold hover:text-secondary transition-colors">info@firstbrickproperty.com</a>
                                     </div>
                                 </div>
                             </div>
@@ -144,7 +144,7 @@ export default function Contact() {
                         <div className="pt-4 px-2">
                             <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary/50 mb-6 font-display">Connect with us</h4>
                             <div className="flex gap-4">
-                                <a href="https://www.facebook.com/p/First-Brick-Properties-61579283042227/" className="w-12 h-12 bg-white border border-primary/5 rounded-full flex items-center justify-center shadow-md hover:border-secondary hover:text-secondary transition-all">
+                                <a href="https://www.facebook.com/p/First-Brick-Properties-61579283042227/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white border border-primary/5 rounded-full flex items-center justify-center shadow-md hover:border-secondary hover:text-secondary transition-all">
                                     <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
                                 </a>
                                 <a href="#" className="w-12 h-12 bg-white border border-primary/5 rounded-full flex items-center justify-center shadow-md hover:border-secondary hover:text-secondary transition-all">
