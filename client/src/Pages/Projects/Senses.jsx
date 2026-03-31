@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectEnquiry from '../../Components/UI/ProjectEnquiry';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiDownload, FiMapPin, FiCheckCircle, FiPhone } from 'react-icons/fi';
@@ -62,7 +63,7 @@ export default function Senses() {
                                 Get Brochure <FiDownload className="group-hover:translate-y-1 transition-transform" />
                             </a>
                             <a 
-                                href="https://wa.me/918371874510" 
+                                href="https://wa.me/918371874510?text=I'm%20interested%20in%20The%20Senses%20project.%20Please%20provide%20more%20details." 
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="bg-[#25D366] hover:bg-[#20bd5c] text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 transition-all lg:text-base text-sm shadow-xl shadow-[#25D366]/20"
@@ -159,21 +160,8 @@ export default function Senses() {
                         <h2 className="text-4xl md:text-6xl font-display font-bold text-[#2d3e3e]">Reach the Stars <br /> of Reality</h2>
                         <p className="text-[#2d3e3e]/60 font-medium italic">Discover your rainbow of infinite hues today.</p>
                     </div>
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-6 pb-20">
-                        <Link 
-                            to="/contact"
-                            className="bg-[#2d3e3e] hover:bg-[#1a2525] text-white px-12 py-5 rounded-full font-bold text-lg transition-all shadow-xl shadow-[#2d3e3e]/20 group flex items-center gap-3"
-                        >
-                            Visit The Senses <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
-                        </Link>
-                        <a 
-                            href="https://wa.me/918371874510" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="bg-[#25D366] hover:bg-[#20bd5c] text-white px-10 py-5 rounded-full font-bold text-lg transition-all shadow-xl shadow-[#25D366]/20 flex items-center gap-3"
-                        >
-                            <FiPhone /> Instant Inquiry
-                        </a>
+                    <div className="max-w-xl mx-auto space-y-12 pb-20">
+                        <ProjectEnquiry projectName="The Senses" accentColor="#4a7c7c" />
                     </div>
                 </div>
             </section>

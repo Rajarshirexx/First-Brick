@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectEnquiry from '../../Components/UI/ProjectEnquiry';
 import brochurePdf from '../../assets/EMBEE_DELIGHT_BROCHURE.pdf';
 import brochurePage1 from '../../assets/embee/EMBEE_DELIGHT_BROCHURE_page-0001.jpg';
 import brochurePage3 from '../../assets/embee/EMBEE_DELIGHT_BROCHURE_page-0003.jpg';
@@ -227,6 +228,9 @@ export default function EmbeeDelight() {
                                 </div>
                             </div>
                         </div>
+                        
+                        {/* Enquiry Section */}
+                        <ProjectEnquiry projectName="Embee Delight" accentColor="#f7941d" />
 
                     </div>
                 </div>

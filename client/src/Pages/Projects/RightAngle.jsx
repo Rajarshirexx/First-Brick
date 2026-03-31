@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectEnquiry from '../../Components/UI/ProjectEnquiry';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiDownload, FiMapPin, FiCheckCircle, FiPhone } from 'react-icons/fi';
@@ -169,24 +170,10 @@ export default function RightAngle() {
                     </div>
                 </div>
 
-                <div className="mt-24 text-center space-y-8">
-                    <p className="text-[#5c2d91]/60 font-medium">Ready to elevate your business presence at Siliguri's most strategic commercial hub?</p>
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-6 pb-20">
-                        <Link 
-                            to="/contact"
-                            className="bg-[#5c2d91] hover:bg-[#4a2475] text-white px-12 py-5 rounded-full font-bold text-lg transition-all shadow-xl shadow-[#5c2d91]/20 group flex items-center gap-3"
-                        >
-                            Inquire for Leasing <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
-                        </Link>
-                        <a 
-                            href="https://wa.me/918371874510" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="bg-[#25D366] hover:bg-[#20bd5c] text-white px-10 py-5 rounded-full font-bold text-lg transition-all shadow-xl shadow-[#25D366]/20 flex items-center gap-3"
-                        >
-                            <FiPhone /> WhatsApp Inquiry
-                        </a>
-                    </div>
+                <div className="mt-24 max-w-xl mx-auto space-y-12 pb-20">
+                    <p className="text-[#5c2d91]/60 font-medium text-center">Ready to elevate your business presence at Siliguri's most strategic commercial hub?</p>
+                    
+                    <ProjectEnquiry projectName="Right Angle" accentColor="#f7941d" />
                 </div>
             </section>
         </div>

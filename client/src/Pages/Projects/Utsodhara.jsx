@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectEnquiry from '../../Components/UI/ProjectEnquiry';
 import { Link } from 'react-router-dom';
 import { FiPhone } from 'react-icons/fi';
 
@@ -199,18 +200,13 @@ export default function Utsodhara() {
                                 <a 
                                     href={projectPDF} 
                                     download="UTSODHAARA-Brochure.pdf"
-                                    className="bg-white text-secondary w-full py-3 rounded-xl font-bold text-xs uppercase tracking-[0.2em] shadow-lg hover:translate-y-[-2px] hover:shadow-2xl transition-all mb-4 flex items-center justify-center"
+                                    className="bg-white text-secondary w-full py-3 rounded-xl font-bold text-xs uppercase tracking-[0.2em] shadow-lg hover:translate-y-[-2px] hover:shadow-2xl transition-all mb-8 flex items-center justify-center"
                                 >
                                     Download Brochure
                                 </a>
-                                <a 
-                                    href="https://wa.me/918371874510" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="bg-[#25D366] text-white w-full py-3 rounded-xl font-bold text-xs uppercase tracking-[0.2em] shadow-lg hover:translate-y-[-2px] hover:shadow-2xl transition-all flex items-center justify-center gap-2"
-                                >
-                                    <FiPhone /> WhatsApp Inquiry
-                                </a>
+                                
+                                {/* Standardized Enquiry Section */}
+                                <ProjectEnquiry projectName="Utsodhaara" accentColor="#fcfdfb" isDark={true} />
                             </div>
                         </div>
 
