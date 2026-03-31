@@ -1,7 +1,6 @@
 import React from 'react';
 import ProjectEnquiry from '../../Components/UI/ProjectEnquiry';
 import { Link } from 'react-router-dom';
-import { FiPhone } from 'react-icons/fi';
 
 // Asset Imports
 import utsodharaHero from '../../assets/utsodhara/Utsodhaara-Brochure_page-0008.jpg';

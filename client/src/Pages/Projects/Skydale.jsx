@@ -1,6 +1,5 @@
 import React from 'react';
 import ProjectEnquiry from '../../Components/UI/ProjectEnquiry';
-import { FiPhone } from 'react-icons/fi';
 import brochurePdf from '../../assets/SKYDALE E-BROCHURE REVISED.pdf';
 import brochurePage1 from '../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0001.jpg';
 import brochurePage2 from '../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0002.jpg';

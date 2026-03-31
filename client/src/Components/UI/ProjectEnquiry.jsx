@@ -1,5 +1,6 @@
 import React from 'react';
-import { FiPhone, FiMail } from 'react-icons/fi';
+import { FiMail } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function ProjectEnquiry({ projectName, isDark = false, accentColor = "#f7941d" }) {
     const whatsappNumber = "918371874510";
@@ -26,7 +27,7 @@ export default function ProjectEnquiry({ projectName, isDark = false, accentColo
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd5c] text-white py-4 rounded-xl font-bold text-xs uppercase tracking-[0.2em] shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 w-full"
                 >
-                    <FiPhone className="text-lg" />
+                    <FaWhatsapp className="text-xl" />
                     WhatsApp Enquiry
                 </a>
 

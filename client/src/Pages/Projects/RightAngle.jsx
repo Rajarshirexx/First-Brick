@@ -2,7 +2,7 @@ import React from 'react';
 import ProjectEnquiry from '../../Components/UI/ProjectEnquiry';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FiArrowRight, FiDownload, FiMapPin, FiCheckCircle, FiPhone } from 'react-icons/fi';
+import { FiArrowRight, FiDownload, FiMapPin, FiCheckCircle } from 'react-icons/fi';
 import rightAngleHero from '../../assets/RIGHT ANGLE BROCHURE/RIGHT ANGLE BROCHURE V2_page-0005.jpg';
 import iconicView from '../../assets/RIGHT ANGLE BROCHURE/RIGHT ANGLE BROCHURE V2_page-0007.jpg';
 import drivewayView from '../../assets/RIGHT ANGLE BROCHURE/RIGHT ANGLE BROCHURE V2_page-0011.jpg';

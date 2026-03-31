@@ -2,7 +2,8 @@ import React from 'react';
 import ProjectEnquiry from '../../Components/UI/ProjectEnquiry';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FiArrowRight, FiDownload, FiMapPin, FiCheckCircle, FiPhone } from 'react-icons/fi';
+import { FiArrowRight, FiDownload, FiMapPin, FiCheckCircle } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
 
 // Asset Imports
 import sensesHero from '../../assets/senses/The SENSES_page-0011.jpg';
@@ -68,7 +69,7 @@ export default function Senses() {
                                 rel="noopener noreferrer"
                                 className="bg-[#25D366] hover:bg-[#20bd5c] text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 transition-all lg:text-base text-sm shadow-xl shadow-[#25D366]/20"
                             >
-                                <FiPhone /> WhatsApp Inquiry
+                                <FaWhatsapp className="text-xl" /> WhatsApp Inquiry
                             </a>
                         </div>
                     </motion.div>

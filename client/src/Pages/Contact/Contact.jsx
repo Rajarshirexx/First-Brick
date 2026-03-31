@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
 import contactImg from '../../assets/img3.jpg';
 
 export default function Contact() {
@@ -119,7 +120,7 @@ export default function Contact() {
                                 </div>
                                 <div className="flex items-start gap-4 group">
                                     <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0 text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-300 font-bold border border-secondary/20 shadow-sm shadow-secondary/5">
-                                        WA
+                                        <FaWhatsapp className="text-xl" />
                                     </div>
                                     <div className="space-y-1">
                                         <p className="text-primary/40 text-[10px] uppercase font-bold tracking-widest mb-1">WhatsApp Inquiry</p>
