@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import ProjectEnquiry from '../../Components/UI/ProjectEnquiry';
 import { Link } from 'react-router-dom';
 
@@ -35,6 +36,10 @@ export default function Utsodhara() {
 
     return (
         <div className="bg-[#fcfdfb] min-h-screen">
+            <Helmet>
+                <title>Utsodhara | Luxury Enclave | First Brick Properties</title>
+                <meta name="description" content="Utsodhara by First Brick Properties: A luxury residential enclave offering peaceful living with modern amenities." />
+            </Helmet>
             {/* Split-Screen Branded Hero */}
             <div className="relative h-[65vh] flex flex-col md:flex-row overflow-hidden border-b border-primary/5">
                 <div 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import ProjectEnquiry from '../../Components/UI/ProjectEnquiry';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -28,6 +29,11 @@ export default function Senses() {
 
     return (
         <div className="bg-[#fcfcf7] min-h-screen">
+            <Helmet>
+                <title>The Senses | Exquisite Living Experience | First Brick Properties</title>
+                <meta name="description" content="Immerse yourself in The Senses, a premier residential project by First Brick Properties. Where architectural excellence meets unparalleled comfort." />
+            </Helmet>
+
             {/* Hero Section */}
             <section className="relative h-[85vh] flex items-center overflow-hidden">
                 <motion.div 

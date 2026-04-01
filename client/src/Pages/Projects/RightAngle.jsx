@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import ProjectEnquiry from '../../Components/UI/ProjectEnquiry';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -31,6 +32,10 @@ export default function RightAngle() {
 
     return (
         <div className="bg-[#fcfbff] min-h-screen">
+            <Helmet>
+                <title>Right Angle | Strategic Commercial Spaces | First Brick Properties</title>
+                <meta name="description" content="Right Angle by First Brick Properties: Innovative commercial spaces designed for the modern business elite." />
+            </Helmet>
             {/* Hero Section */}
             <section className="relative h-[85vh] flex items-center overflow-hidden">
                 <motion.div 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import ProjectCard from '../../Components/UI/ProjectCard';
 import project1 from '../../assets/embee.png';
@@ -53,6 +54,10 @@ export default function Projects() {
 
     return (
         <div className="bg-bg min-h-screen pt-32 pb-24">
+            <Helmet>
+                <title>Exquisite Project Portfolio | First Brick Properties</title>
+                <meta name="description" content="Explore our curated selection of premium properties, ranging from luxury residences to landmark commercial destinations." />
+            </Helmet>
             <div className="container px-6">
                 
                 {/* Header */}

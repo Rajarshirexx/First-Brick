@@ -1,9 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import aboutImg from '../../assets/img3.jpg';
 
 export default function About() {
     return (
         <div className="bg-bg min-h-screen pt-32 pb-24">
+            <Helmet>
+                <title>Our Story & Vision | First Brick Properties</title>
+                <meta name="description" content="FirstBrick is a dedicated property marketing agency, transforming architectural visions into premium market realities with strategic precision." />
+            </Helmet>
             <div className="container px-6">
                 
                 {/* Hero Segment */}

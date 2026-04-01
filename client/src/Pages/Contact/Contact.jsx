@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { FaWhatsapp } from 'react-icons/fa';
 import contactImg from '../../assets/img3.jpg';
 
@@ -77,6 +78,10 @@ ${formData.fullName}
 
     return (
         <div className="bg-bg min-h-screen">
+            <Helmet>
+                <title>Enquire & Connect | First Brick Properties</title>
+                <meta name="description" content="Let's connect. Whether you're developing a landmark project or seeking your next luxury residence, our strategic team is ready to assist you." />
+            </Helmet>
             
             {/* Hero Segment */}
             <div className="relative h-[60vh] flex items-center overflow-hidden pt-20">

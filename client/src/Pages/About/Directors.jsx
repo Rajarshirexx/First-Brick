@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const directors = [
     {
@@ -28,6 +29,10 @@ const directors = [
 export default function Directors() {
     return (
         <div className="bg-bg min-h-screen pt-32 pb-24">
+            <Helmet>
+                <title>Leadership Team | First Brick Properties</title>
+                <meta name="description" content="Guided by decades of collective expertise, our leadership team sculpts the future of property marketing at First Brick." />
+            </Helmet>
             <div className="container px-6">
                 
                 {/* Header */}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import ProjectEnquiry from '../../Components/UI/ProjectEnquiry';
 import brochurePdf from '../../assets/SKYDALE E-BROCHURE REVISED.pdf';
 import brochurePage1 from '../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0001.jpg';
@@ -19,6 +20,10 @@ export default function Skydale() {
 
     return (
         <div className="bg-[#f8fafc] min-h-screen font-sans text-slate-900 selection:bg-[#083333] selection:text-white">
+            <Helmet>
+                <title>Skydale | Luxury Above All | First Brick Properties</title>
+                <meta name="description" content="Skydale Residences by First Brick Properties. Offering an elite lifestyle with breathtaking views and modern architectural brilliance." />
+            </Helmet>
             
             {/* Branded Hero Header */}
             <div className="relative h-[65vh] bg-[#083333] flex flex-col justify-center items-center text-center px-6 overflow-hidden py-20">

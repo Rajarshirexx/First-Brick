@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import ProjectEnquiry from '../../Components/UI/ProjectEnquiry';
 import brochurePdf from '../../assets/EMBEE_DELIGHT_BROCHURE.pdf';
 import brochurePage1 from '../../assets/embee/EMBEE_DELIGHT_BROCHURE_page-0001.jpg';
@@ -20,6 +21,10 @@ export default function EmbeeDelight() {
 
     return (
         <div className="bg-bg min-h-screen">
+            <Helmet>
+                <title>Embee Delight Luxury Residences | First Brick Properties</title>
+                <meta name="description" content="Discover Embee Delight, a contemporary residential masterpiece by First Brick Properties. Luxury living redefined in the heart of Siliguri." />
+            </Helmet>
             
             {/* Branded Header Segment (Solid) */}
             <div className="relative h-[65vh] flex items-center bg-primary overflow-hidden py-20">
