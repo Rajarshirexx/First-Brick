@@ -25,12 +25,14 @@ export default function CTASection() {
                     </p>
                     
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                        <Link 
-                            to="/contact" 
+                        <a 
+                            href="https://wa.me/918371874510?text=Hello%20First%20Brick%20Team,%20I'm%20interested%20in%20a%20general%20enquiry." 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
                             className="bg-primary text-white py-4 px-10 rounded-full font-display font-bold text-sm uppercase tracking-widest hover:bg-primary/90 transition-all duration-300 shadow-2xl hover:-translate-y-1 block sm:inline-block"
                         >
                             Enquire Now
-                        </Link>
+                        </a>
                         <Link 
                             to="/about" 
                             className="border-2 border-white/40 text-white py-4 px-10 rounded-full font-display font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-all duration-300 block sm:inline-block"

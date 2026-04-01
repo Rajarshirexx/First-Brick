@@ -26,7 +26,16 @@ export default function Footer() {
                             <li><Link to="/" className="hover:text-secondary transition-colors">Home</Link></li>
                             <li><Link to="/about" className="hover:text-secondary transition-colors">About Story</Link></li>
                             <li><Link to="/projects" className="hover:text-secondary transition-colors">Premium Projects</Link></li>
-                            <li><Link to="/contact" className="hover:text-secondary transition-colors">Enquire Now</Link></li>
+                            <li>
+                                <a 
+                                    href="https://wa.me/918371874510?text=Hello%20First%20Brick%20Team,%20I'm%20interested%20in%20a%20general%20enquiry." 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="hover:text-secondary transition-colors"
+                                >
+                                    Enquire Now
+                                </a>
+                            </li>
                         </ul>
                     </div>
 

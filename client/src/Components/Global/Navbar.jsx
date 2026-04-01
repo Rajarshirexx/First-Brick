@@ -84,9 +84,14 @@ export default function Navbar() {
                         Contact
                     </NavLink>
 
-                    <Link to="/contact" className="btn-primary py-2 px-6 text-sm">
+                    <a 
+                        href="https://wa.me/918371874510?text=Hello%20First%20Brick%20Team,%20I'm%20interested%20in%20a%20general%20enquiry." 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="btn-primary py-2 px-6 text-sm"
+                    >
                         Enquire Now
-                    </Link>
+                    </a>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -153,13 +158,15 @@ export default function Navbar() {
                             Contact
                         </NavLink>
 
-                        <Link
-                            to="/contact"
+                        <a
+                            href="https://wa.me/918371874510?text=Hello%20First%20Brick%20Team,%20I'm%20interested%20in%20a%20general%20enquiry."
+                            target="_blank"
+                            rel="noopener noreferrer"
                             onClick={() => setIsOpen(false)}
                             className="bg-secondary text-white text-center py-4 rounded-full font-display font-bold uppercase tracking-widest text-sm"
                         >
                             Enquire Now
-                        </Link>
+                        </a>
                     </div>
                 </div>
             )}
