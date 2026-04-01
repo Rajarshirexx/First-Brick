@@ -1,8 +1,80 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import contactImg from '../../assets/img3.jpg';
 
 export default function Contact() {
+    const [formData, setFormData] = useState({
+        fullName: '',
+        email: '',
+        phone: '',
+        interest: 'Residential Luxury',
+        message: ''
+    });
+
+    const [status, setStatus] = useState('');
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (!formData.fullName || !formData.email || !formData.message) {
+            setStatus('Please fill in all required fields.');
+            return;
+        }
+
+        const emailAddress = "info@firstbrickproperty.com";
+        const subject = encodeURIComponent(`Contact Enquiry: ${formData.interest} - ${formData.fullName}`);
+        
+        const bodyContent = `
+Hello First Brick Team,
+
+You have received a new contact enquiry from the website:
+
+--------------------------------------------------
+Full Name: ${formData.fullName}
+Email Address: ${formData.email}
+Phone Number: ${formData.phone || 'Not provided'}
+Property Interest: ${formData.interest}
+--------------------------------------------------
+
+Message:
+${formData.message}
+
+--------------------------------------------------
+Regards,
+${formData.fullName}
+        `.trim();
+
+        const body = encodeURIComponent(bodyContent);
+        
+        // Use timeout to show status before redirecting
+        setStatus('Opening email client...');
+        
+        setTimeout(() => {
+            window.location.href = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
+            setStatus('Enquiry drafted. Please send it from your email app!');
+            
+            // Clear form after slight delay
+            setTimeout(() => {
+                setFormData({
+                    fullName: '',
+                    email: '',
+                    phone: '',
+                    interest: 'Residential Luxury',
+                    message: ''
+                });
+                setStatus('');
+            }, 3000);
+        }, 1000);
+    };
+
     return (
         <div className="bg-bg min-h-screen">
             
@@ -35,22 +107,29 @@ export default function Contact() {
             <div className="container px-6 py-24 relative z-20">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
                     
-                    {/* Contact Form Section */}
                     <div className="lg:col-span-7 bg-white p-8 md:p-12 rounded-2xl shadow-2xl border border-primary/5 animate-fadeIn">
-                        <form className="space-y-6">
+                        <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] uppercase tracking-widest font-bold text-primary/50 ml-1">Full Name</label>
+                                    <label className="text-[10px] uppercase tracking-widest font-bold text-primary/50 ml-1">Full Name *</label>
                                     <input 
                                         type="text" 
+                                        name="fullName"
+                                        value={formData.fullName}
+                                        onChange={handleChange}
+                                        required
                                         placeholder="John Doe"
                                         className="w-full bg-bg border border-primary/10 rounded-xl px-6 py-4 focus:outline-none focus:border-secondary transition-colors font-medium text-primary placeholder:text-primary/20"
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] uppercase tracking-widest font-bold text-primary/50 ml-1">Email Address</label>
+                                    <label className="text-[10px] uppercase tracking-widest font-bold text-primary/50 ml-1">Email Address *</label>
                                     <input 
                                         type="email" 
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        required
                                         placeholder="john@example.com"
                                         className="w-full bg-bg border border-primary/10 rounded-xl px-6 py-4 focus:outline-none focus:border-secondary transition-colors font-medium text-primary placeholder:text-primary/20"
                                     />
@@ -62,13 +141,21 @@ export default function Contact() {
                                     <label className="text-[10px] uppercase tracking-widest font-bold text-primary/50 ml-1">Phone Number</label>
                                     <input 
                                         type="tel" 
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
                                         placeholder="+91 00000 00000"
                                         className="w-full bg-bg border border-primary/10 rounded-xl px-6 py-4 focus:outline-none focus:border-secondary transition-colors font-medium text-primary placeholder:text-primary/20"
                                     />
                                 </div>
                                 <div className="space-y-2">
                                     <label className="text-[10px] uppercase tracking-widest font-bold text-primary/50 ml-1">Property Interest</label>
-                                    <select className="w-full bg-bg border border-primary/10 rounded-xl px-6 py-4 focus:outline-none focus:border-secondary transition-colors font-medium text-primary appearance-none">
+                                    <select 
+                                        name="interest"
+                                        value={formData.interest}
+                                        onChange={handleChange}
+                                        className="w-full bg-bg border border-primary/10 rounded-xl px-6 py-4 focus:outline-none focus:border-secondary transition-colors font-medium text-primary appearance-none"
+                                    >
                                         <option>Residential Luxury</option>
                                         <option>Commercial Spaces</option>
                                         <option>New Project Launch</option>
@@ -78,15 +165,28 @@ export default function Contact() {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[10px] uppercase tracking-widest font-bold text-primary/50 ml-1">Your Message</label>
+                                <label className="text-[10px] uppercase tracking-widest font-bold text-primary/50 ml-1">Your Message *</label>
                                 <textarea 
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    required
                                     rows="5"
                                     placeholder="Tell us about your property goals..."
                                     className="w-full bg-bg border border-primary/10 rounded-xl px-6 py-4 focus:outline-none focus:border-secondary transition-colors font-medium text-primary placeholder:text-primary/20 resize-none"
                                 ></textarea>
                             </div>
 
-                            <button className="w-full bg-primary text-white font-display font-bold uppercase tracking-[0.3em] py-5 rounded-xl hover:bg-secondary transition-all duration-500 shadow-lg hover:shadow-secondary/20">
+                            {status && (
+                                <div className={`text-xs font-bold uppercase tracking-widest text-center py-2 ${status.includes('fill') ? 'text-red-500' : 'text-secondary'}`}>
+                                    {status}
+                                </div>
+                            )}
+
+                            <button 
+                                type="submit"
+                                className="w-full bg-primary text-white font-display font-bold uppercase tracking-[0.3em] py-5 rounded-xl hover:bg-secondary transition-all duration-500 shadow-lg hover:shadow-secondary/20"
+                            >
                                 Send Enquiry
                             </button>
                         </form>
