@@ -8,6 +8,7 @@ import utsodharaCover from '../../assets/utsodhara/Utsodhaara-Brochure_page-0001
 import rightAngleCover from '../../assets/RIGHT ANGLE BROCHURE/RIGHT ANGLE BROCHURE V2_page-0001.jpg';
 import sensesCover from '../../assets/senses/The SENSES_page-0001.jpg';
 import ramVatikaCover from '../../assets/ramvatika/Ram Vatika_page-0001.jpg';
+import edenCrownCover from '../../assets/Eden Crown/EDEN_CROWN_UPDATED_BROCHURE 2_page-0001.jpg';
 
 export default function Projects() {
     const projects = [
@@ -58,6 +59,14 @@ export default function Projects() {
             category: "Premium Residential",
             image: ramVatikaCover,
             description: "A serene residential haven offering modern comfort and elegant living spaces."
+        },
+        {
+            id: "eden-crown",
+            name: "Eden Crown",
+            location: "Siliguri, India",
+            category: "Premium Residential",
+            image: edenCrownCover,
+            description: "A masterfully crafted residential project offering elite living and architectural brilliance."
         }
     ];
 

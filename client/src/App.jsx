@@ -14,6 +14,7 @@ import Utsodhara from './Pages/Projects/Utsodhara';
 import RightAngle from './Pages/Projects/RightAngle';
 import Senses from './Pages/Projects/Senses';
 import RamVatika from './Pages/Projects/RamVatika';
+import EdenCrown from './Pages/Projects/EdenCrown';
 import Contact from './Pages/Contact/Contact';
 import './App.css';
 
@@ -35,6 +36,7 @@ function App() {
             <Route path="/projects/right-angle" element={<RightAngle />} />
             <Route path="/projects/the-senses" element={<Senses />} />
             <Route path="/projects/ram-vatika" element={<RamVatika />} />
+            <Route path="/projects/eden-crown" element={<EdenCrown />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
