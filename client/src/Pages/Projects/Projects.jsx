@@ -9,6 +9,7 @@ import rightAngleCover from '../../assets/RIGHT ANGLE BROCHURE/RIGHT ANGLE BROCH
 import sensesCover from '../../assets/senses/The SENSES_page-0001.jpg';
 import ramVatikaCover from '../../assets/ramvatika/Ram Vatika_page-0001.jpg';
 import edenCrownCover from '../../assets/Eden Crown/EDEN_CROWN_UPDATED_BROCHURE 2_page-0001.jpg';
+import anandVillaCover from '../../assets/anand villa/Anand Villa_page-0001.jpg';
 
 export default function Projects() {
     const projects = [
@@ -67,6 +68,14 @@ export default function Projects() {
             category: "Premium Residential",
             image: edenCrownCover,
             description: "A masterfully crafted residential project offering elite living and architectural brilliance."
+        },
+        {
+            id: "anand-villa",
+            name: "Anand Villa",
+            location: "Siliguri, India",
+            category: "Premium Residential",
+            image: anandVillaCover,
+            description: "Experience the joy of a perfect home. Modern luxury meets timeless comfort."
         }
     ];
 
