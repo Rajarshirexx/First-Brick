@@ -14,6 +14,7 @@ import skydaleImg from '../../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-
 import utsodharaImg from '../../../assets/utsodhara/Utsodhaara-Brochure_page-0001.jpg';
 import rightAngleImg from '../../../assets/RIGHT ANGLE BROCHURE/RIGHT ANGLE BROCHURE V2_page-0001.jpg';
 import sensesImg from '../../../assets/senses/The SENSES_page-0001.jpg';
+import ramVatikaImg from '../../../assets/ramvatika/Ram Vatika_page-0001.jpg';
 
 const projects = [
     {
@@ -55,6 +56,14 @@ const projects = [
         image: sensesImg,
         category: "Premium Residential",
         description: "A rainbow of infinite hues. A 7.4-acre residential sanctuary with 60% open space."
+    },
+    {
+        id: "ram-vatika",
+        name: "Ram Vatika",
+        location: "Siliguri, WB",
+        image: ramVatikaImg,
+        category: "Premium Residential",
+        description: "A serene residential haven offering modern comfort and elegant living spaces."
     }
 ];
 

@@ -13,6 +13,7 @@ import Skydale from './Pages/Projects/Skydale';
 import Utsodhara from './Pages/Projects/Utsodhara';
 import RightAngle from './Pages/Projects/RightAngle';
 import Senses from './Pages/Projects/Senses';
+import RamVatika from './Pages/Projects/RamVatika';
 import Contact from './Pages/Contact/Contact';
 import './App.css';
 
@@ -33,6 +34,7 @@ function App() {
             <Route path="/projects/utsodhara" element={<Utsodhara />} />
             <Route path="/projects/right-angle" element={<RightAngle />} />
             <Route path="/projects/the-senses" element={<Senses />} />
+            <Route path="/projects/ram-vatika" element={<RamVatika />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
