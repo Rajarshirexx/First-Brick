@@ -6,12 +6,12 @@ import { FiDownload, FiMapPin, FiCheckCircle } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 
 // Asset Imports
-import anandVillaCover from '../../assets/anand villa/Anand Villa_page-0001.jpg';
-import anandVillaPage2 from '../../assets/anand villa/Anand Villa_page-0002.jpg';
-import anandVillaPage3 from '../../assets/anand villa/Anand Villa_page-0003.jpg';
-import anandVillaPage4 from '../../assets/anand villa/Anand Villa_page-0004.jpg';
-import anandVillaPage5 from '../../assets/anand villa/Anand Villa_page-0005.jpg';
-import projectPDF from '../../assets/Anand Villa.pdf';
+import anandVillaCover from '../../assets/anand_villa/anand_villa_page_0001.jpg';
+import anandVillaPage2 from '../../assets/anand_villa/anand_villa_page_0002.jpg';
+import anandVillaPage3 from '../../assets/anand_villa/anand_villa_page_0003.jpg';
+import anandVillaPage4 from '../../assets/anand_villa/anand_villa_page_0004.jpg';
+import anandVillaPage5 from '../../assets/anand_villa/anand_villa_page_0005.jpg';
+import projectPDF from '../../assets/anand_villa_brochure.pdf';
 
 export default function AnandVilla() {
     const highlights = [

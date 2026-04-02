@@ -6,12 +6,12 @@ import { FiDownload, FiMapPin, FiCheckCircle } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 
 // Asset Imports
-import edenCrownCover from '../../assets/Eden Crown/EDEN_CROWN_UPDATED_BROCHURE 2_page-0001.jpg';
-import edenCrownPage2 from '../../assets/Eden Crown/EDEN_CROWN_UPDATED_BROCHURE 2_page-0002.jpg';
-import edenCrownPage3 from '../../assets/Eden Crown/EDEN_CROWN_UPDATED_BROCHURE 2_page-0003.jpg';
-import edenCrownPage4 from '../../assets/Eden Crown/EDEN_CROWN_UPDATED_BROCHURE 2_page-0004.jpg';
-import edenCrownPage5 from '../../assets/Eden Crown/EDEN_CROWN_UPDATED_BROCHURE 2_page-0005.jpg';
-import projectPDF from '../../assets/EDEN_CROWN_UPDATED_BROCHURE 2.pdf';
+import edenCrownCover from '../../assets/eden_crown/eden_crown_page_0001.jpg';
+import edenCrownPage2 from '../../assets/eden_crown/eden_crown_page_0002.jpg';
+import edenCrownPage3 from '../../assets/eden_crown/eden_crown_page_0003.jpg';
+import edenCrownPage4 from '../../assets/eden_crown/eden_crown_page_0004.jpg';
+import edenCrownPage5 from '../../assets/eden_crown/eden_crown_page_0005.jpg';
+import projectPDF from '../../assets/eden_crown_brochure.pdf';
 
 export default function EdenCrown() {
     const highlights = [
