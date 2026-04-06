@@ -323,7 +323,7 @@ ${formData.fullName}
                                     </div>
                                     <p className="text-muted leading-relaxed">
                                         F-201, 2nd Floor, Grand Plaza, <br />
-                                        Pradhan Nagar, Siliguri, India, 734001
+                                        Pradhan Nagar, Siliguri, India, 734003
                                     </p>
                                 </div>
                                 <div className="flex items-start gap-4 group">
@@ -331,8 +331,9 @@ ${formData.fullName}
                                         <span className="text-xl">📞</span>
                                     </div>
                                     <div className="space-y-1">
-                                        <p className="text-primary font-bold">+91 74775 55885</p>
-                                        <p className="text-primary font-bold">+91 93321 02120</p>
+                                        <p className="text-primary font-bold">+91 83718 74510</p>
+                                        <p className="text-primary font-bold">+91 70018 20374</p>
+                                        <p className="text-primary font-bold">+91 80161 51211</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4 group">

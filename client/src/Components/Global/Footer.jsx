@@ -44,11 +44,12 @@ export default function Footer() {
                         <h4 className="text-lg font-display font-semibold mb-6 text-peach underline underline-offset-8 decoration-secondary/30">Registry</h4>
                         <ul className="flex flex-col gap-4 text-sm text-slate-300">
                             <li className="flex items-start gap-3">
-                                <span className="text-slate-400">Pradhan Nagar, Siliguri, India, 734001</span>
+                                <span className="text-slate-400">Pradhan Nagar, Siliguri, India, 734003</span>
                             </li>
                             <li className="flex flex-col gap-2">
                                 <a href="tel:+918371874510" className="hover:text-secondary transition-colors">+91 83718 74510</a>
                                 <a href="tel:+917001820374" className="hover:text-secondary transition-colors">+91 70018 20374</a>
+                                <a href="tel:+918016151211" className="hover:text-secondary transition-colors">+91 80161 51211</a>
                             </li>
                             <li>
                                 <a href="mailto:info@firstbrickproperty.com" className="hover:text-secondary transition-colors truncate">info@firstbrickproperty.com</a>
