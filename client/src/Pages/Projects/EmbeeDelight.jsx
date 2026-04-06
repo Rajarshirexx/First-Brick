@@ -45,7 +45,7 @@ export default function EmbeeDelight() {
                                 <span className="text-secondary text-xl">🏢</span> Residential Luxury
                             </div>
                             <div className="flex items-center gap-3 border-l border-white/20 pl-8">
-                                <span className="text-secondary text-xl">✨</span> Ready to Move
+                                <span className="text-secondary text-xl">✨</span> Rent/Resell
                             </div>
                         </div>
                     </div>
@@ -229,7 +229,7 @@ export default function EmbeeDelight() {
                                 </div>
                                 <div className="flex justify-between items-center py-1 border-b border-primary/5">
                                     <span className="text-xs font-bold text-primary/40 uppercase tracking-widest">Status</span>
-                                    <span className="text-sm font-bold text-secondary">Ready to Move</span>
+                                    <span className="text-sm font-bold text-secondary">Rent/Resell</span>
                                 </div>
                             </div>
                         </div>
