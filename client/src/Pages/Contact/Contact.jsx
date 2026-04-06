@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FaWhatsapp } from 'react-icons/fa';
+import { FiMail, FiCopy, FiExternalLink, FiCheck, FiX } from 'react-icons/fi';
+import { motion, AnimatePresence } from 'framer-motion';
 import contactImg from '../../assets/img3.jpg';
 
 export default function Contact() {
@@ -13,6 +15,11 @@ export default function Contact() {
     });
 
     const [status, setStatus] = useState('');
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [copied, setCopied] = useState(false);
+    const [mailUrls, setMailUrls] = useState({ mailto: '', gmail: '' });
+
+    const emailAddress = "info@firstbrickproperty.com";
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -20,6 +27,12 @@ export default function Contact() {
             ...prev,
             [name]: value
         }));
+    };
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText(emailAddress);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
     };
 
     const handleSubmit = (e) => {
@@ -30,9 +43,7 @@ export default function Contact() {
             return;
         }
 
-        const emailAddress = "info@firstbrickproperty.com";
-        const subject = encodeURIComponent(`Contact Enquiry: ${formData.interest} - ${formData.fullName}`);
-        
+        const subject = `Contact Enquiry: ${formData.interest} - ${formData.fullName}`;
         const bodyContent = `
 Hello First Brick Team,
 
@@ -53,27 +64,26 @@ Regards,
 ${formData.fullName}
         `.trim();
 
-        const body = encodeURIComponent(bodyContent);
+        const encodedSubject = encodeURIComponent(subject);
+        const encodedBody = encodeURIComponent(bodyContent);
         
-        // Use timeout to show status before redirecting
-        setStatus('Opening email client...');
-        
-        setTimeout(() => {
-            window.location.href = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
-            setStatus('Enquiry drafted. Please send it from your email app!');
-            
-            // Clear form after slight delay
-            setTimeout(() => {
-                setFormData({
-                    fullName: '',
-                    email: '',
-                    phone: '',
-                    interest: 'Residential Luxury',
-                    message: ''
-                });
-                setStatus('');
-            }, 3000);
-        }, 1000);
+        const mailto = `mailto:${emailAddress}?subject=${encodedSubject}&body=${encodedBody}`;
+        const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailAddress}&su=${encodedSubject}&body=${encodedBody}`;
+
+        setMailUrls({ mailto, gmail });
+        setIsSubmitted(true);
+        setStatus('');
+    };
+
+    const resetForm = () => {
+        setFormData({
+            fullName: '',
+            email: '',
+            phone: '',
+            interest: 'Residential Luxury',
+            message: ''
+        });
+        setIsSubmitted(false);
     };
 
     return (
@@ -112,7 +122,7 @@ ${formData.fullName}
             <div className="container px-6 py-24 relative z-20">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
                     
-                    <div className="lg:col-span-7 bg-white p-8 md:p-12 rounded-2xl shadow-2xl border border-primary/5 animate-fadeIn">
+                    <div className="lg:col-span-7 bg-white p-8 md:p-12 rounded-2xl shadow-2xl border border-primary/5 animate-fadeIn relative overflow-hidden">
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
@@ -183,18 +193,120 @@ ${formData.fullName}
                             </div>
 
                             {status && (
-                                <div className={`text-xs font-bold uppercase tracking-widest text-center py-2 ${status.includes('fill') ? 'text-red-500' : 'text-secondary'}`}>
+                                <div className="text-xs font-bold uppercase tracking-widest text-center py-2 text-red-500">
                                     {status}
                                 </div>
                             )}
 
                             <button 
                                 type="submit"
-                                className="w-full bg-primary text-white font-display font-bold uppercase tracking-[0.3em] py-5 rounded-xl hover:bg-secondary transition-all duration-500 shadow-lg hover:shadow-secondary/20"
+                                className="w-full bg-primary text-white font-display font-bold uppercase tracking-[0.3em] py-5 rounded-xl hover:bg-secondary transition-all duration-500 shadow-lg hover:shadow-secondary/20 cursor-pointer"
                             >
                                 Send Enquiry
                             </button>
                         </form>
+
+                        {/* Success Modal Overlay */}
+                        <AnimatePresence>
+                            {isSubmitted && (
+                                <motion.div 
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    className="absolute inset-0 bg-white/95 backdrop-blur-md z-30 flex flex-col items-center justify-center p-8 text-center"
+                                >
+                                    <motion.button 
+                                        initial={{ opacity: 0, scale: 0.5 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        onClick={() => setIsSubmitted(false)}
+                                        className="absolute top-6 right-6 text-primary/40 hover:text-primary p-2 cursor-pointer"
+                                    >
+                                        <FiX size={24} />
+                                    </motion.button>
+
+                                    <motion.div 
+                                        initial={{ y: 20, opacity: 0 }}
+                                        animate={{ y: 0, opacity: 1 }}
+                                        transition={{ delay: 0.1 }}
+                                        className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center text-white mb-6 shadow-xl shadow-secondary/20"
+                                    >
+                                        <FiCheck size={40} />
+                                    </motion.div>
+
+                                    <motion.h3 
+                                        initial={{ y: 20, opacity: 0 }}
+                                        animate={{ y: 0, opacity: 1 }}
+                                        transition={{ delay: 0.2 }}
+                                        className="text-3xl font-display font-bold text-primary mb-2"
+                                    >
+                                        Enquiry Drafted
+                                    </motion.h3>
+                                    <motion.p 
+                                        initial={{ y: 20, opacity: 0 }}
+                                        animate={{ y: 0, opacity: 1 }}
+                                        transition={{ delay: 0.3 }}
+                                        className="text-muted text-sm font-medium mb-10 max-w-sm"
+                                    >
+                                        Your enquiry is ready. Please choose how you would like to send it to us.
+                                    </motion.p>
+
+                                    <motion.div 
+                                        initial={{ y: 20, opacity: 0 }}
+                                        animate={{ y: 0, opacity: 1 }}
+                                        transition={{ delay: 0.4 }}
+                                        className="w-full max-w-sm space-y-3"
+                                    >
+                                        <a 
+                                            href={mailUrls.mailto}
+                                            className="flex items-center justify-between p-4 rounded-xl bg-primary text-white hover:bg-secondary transition-all group w-full"
+                                        >
+                                            <div className="flex items-center gap-3">
+                                                <FiMail className="text-xl" />
+                                                <span className="text-xs font-bold uppercase tracking-wider">Default Email App</span>
+                                            </div>
+                                            <FiExternalLink className="text-sm opacity-50 group-hover:opacity-100" />
+                                        </a>
+
+                                        <a 
+                                            href={mailUrls.gmail}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center justify-between p-4 rounded-xl bg-red-50 text-red-600 hover:bg-red-500 hover:text-white transition-all group w-full"
+                                        >
+                                            <div className="flex items-center gap-3">
+                                                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                                </svg>
+                                                <span className="text-xs font-bold uppercase tracking-wider">Open in Web Gmail</span>
+                                            </div>
+                                            <FiExternalLink className="text-sm opacity-50 group-hover:opacity-100" />
+                                        </a>
+
+                                        <button 
+                                            onClick={handleCopy}
+                                            className="flex items-center justify-between p-4 rounded-xl border-2 border-primary/10 text-primary hover:border-secondary hover:text-secondary transition-all group w-full cursor-pointer"
+                                        >
+                                            <div className="flex items-center gap-3">
+                                                {copied ? <FiCheck className="text-xl text-secondary" /> : <FiCopy className="text-xl" />}
+                                                <span className="text-xs font-bold uppercase tracking-wider">
+                                                    {copied ? "Email Copied!" : "Copy Email Address"}
+                                                </span>
+                                            </div>
+                                            <span className="text-[10px] font-mono opacity-40 group-hover:opacity-100 uppercase tracking-tighter">
+                                                {emailAddress}
+                                            </span>
+                                        </button>
+
+                                        <button 
+                                            onClick={resetForm}
+                                            className="block w-full pt-6 text-[10px] font-bold uppercase tracking-[0.2em] text-primary/40 hover:text-secondary transition-colors cursor-pointer"
+                                        >
+                                            Start New enquiry
+                                        </button>
+                                    </motion.div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
                     </div>
 
                     {/* Contact Sidebar Section */}
@@ -229,7 +341,7 @@ ${formData.fullName}
                                     </div>
                                     <div className="space-y-1">
                                         <p className="text-primary/40 text-[10px] uppercase font-bold tracking-widest mb-1">WhatsApp Inquiry</p>
-                                        <a href="https://wa.me/918371874510" target="_blank" rel="noopener noreferrer" className="text-primary font-bold hover:text-[#25D366] transition-colors inline-block">
+                                        <a href="https://wa.me/918371874510" target="_blank" rel="noopener noreferrer" className="text-primary font-bold hover:text-[#25D366] transition-colors inline-block text-base tracking-normal">
                                             +91 83718 74510
                                         </a>
                                     </div>
@@ -252,6 +364,9 @@ ${formData.fullName}
                             <div className="flex gap-4">
                                 <a href="https://www.facebook.com/p/First-Brick-Properties-61579283042227/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white border border-primary/5 rounded-full flex items-center justify-center shadow-md hover:border-secondary hover:text-secondary transition-all">
                                     <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                                </a>
+                                <a href="#" className="w-12 h-12 bg-white border border-primary/5 rounded-full flex items-center justify-center shadow-md hover:border-secondary hover:text-secondary transition-all">
+                                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                 </a>
                                 <a href="#" className="w-12 h-12 bg-white border border-primary/5 rounded-full flex items-center justify-center shadow-md hover:border-secondary hover:text-secondary transition-all">
                                     <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
