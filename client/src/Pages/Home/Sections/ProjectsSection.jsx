@@ -15,8 +15,17 @@ import utsodharaImg from '../../../assets/utsodhara/Utsodhaara-Brochure_page-000
 import rightAngleImg from '../../../assets/RIGHT ANGLE BROCHURE/RIGHT ANGLE BROCHURE V2_page-0001.jpg';
 import sensesImg from '../../../assets/senses/The SENSES_page-0001.jpg';
 import ramVatikaImg from '../../../assets/ramvatika/Ram Vatika_page-0001.jpg';
+import ns10Cover from '../../../assets/ns10/E1_FINAL02.jpg';
 
 const projects = [
+    {
+        id: "ns10",
+        name: "NS10",
+        location: "Siliguri, India",
+        image: ns10Cover,
+        category: "Commercial Landmark",
+        description: "A futuristic commercial hub redefining business excellence in Siliguri."
+    },
     {
         id: "embee-delight",
         name: "Embee Delight",

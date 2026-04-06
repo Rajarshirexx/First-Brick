@@ -17,6 +17,7 @@ import Senses from './Pages/Projects/Senses';
 import RamVatika from './Pages/Projects/RamVatika';
 import EdenCrown from './Pages/Projects/EdenCrown';
 import AnandVilla from './Pages/Projects/AnandVilla';
+import NS10 from './Pages/Projects/NS10';
 import Contact from './Pages/Contact/Contact';
 import './App.css';
 
@@ -40,6 +41,7 @@ function App() {
             <Route path="/projects/ram-vatika" element={<RamVatika />} />
             <Route path="/projects/eden-crown" element={<EdenCrown />} />
             <Route path="/projects/anand-villa" element={<AnandVilla />} />
+            <Route path="/projects/ns10" element={<NS10 />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

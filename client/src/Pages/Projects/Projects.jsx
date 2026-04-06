@@ -10,9 +10,18 @@ import sensesCover from '../../assets/senses/The SENSES_page-0001.jpg';
 import ramVatikaCover from '../../assets/ramvatika/Ram Vatika_page-0001.jpg';
 import edenCrownCover from '../../assets/eden_crown/eden_crown_page_0001.jpg';
 import anandVillaCover from '../../assets/anand_villa/anand_villa_page_0001.jpg';
+import ns10Cover from '../../assets/ns10/E1_FINAL02.jpg';
 
 export default function Projects() {
     const projects = [
+        {
+            id: "ns10",
+            name: "NS10",
+            location: "Siliguri, India",
+            category: "Commercial Landmark",
+            image: ns10Cover,
+            description: "A futuristic commercial hub redefining business excellence in Siliguri."
+        },
         {
             id: "embee-delight",
             name: "Embee Delight",
