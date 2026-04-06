@@ -37,11 +37,11 @@ export default function ProjectEnquiry({ projectName, isDark = false, accentColo
                 <h4 className={`text-lg font-display font-bold ${primaryTextClass} italic mb-1`}>Interested in {projectName}?</h4>
                 <p className={`${secondaryTextClass} text-[10px] uppercase font-bold tracking-[0.2em]`}>Connect with our specialists</p>
             </div>
-            
+
             <div className="flex flex-col gap-4 relative">
-                <a 
+                <a
                     href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-                    target="_blank" 
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd5c] text-white py-4 rounded-xl font-bold text-xs uppercase tracking-[0.2em] shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 w-full"
                 >
@@ -74,7 +74,7 @@ export default function ProjectEnquiry({ projectName, isDark = false, accentColo
                             >
                                 <div className="flex justify-between items-center mb-2 px-2">
                                     <span className="text-[10px] font-bold uppercase tracking-widest text-primary/40">Choose Method</span>
-                                    <button 
+                                    <button
                                         onClick={() => setShowOptions(false)}
                                         className="text-[10px] font-bold uppercase text-secondary hover:underline cursor-pointer"
                                     >
@@ -83,7 +83,7 @@ export default function ProjectEnquiry({ projectName, isDark = false, accentColo
                                 </div>
 
                                 <div className="grid grid-cols-1 gap-2">
-                                    <a 
+                                    <a
                                         href={mailtoUrl}
                                         className="flex items-center justify-between p-3 rounded-xl bg-primary/5 hover:bg-primary hover:text-white transition-all group"
                                     >
@@ -94,7 +94,7 @@ export default function ProjectEnquiry({ projectName, isDark = false, accentColo
                                         <FiExternalLink className="text-xs opacity-40 group-hover:opacity-100" />
                                     </a>
 
-                                    <a 
+                                    <a
                                         href={gmailUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -109,7 +109,7 @@ export default function ProjectEnquiry({ projectName, isDark = false, accentColo
                                         <FiExternalLink className="text-xs text-red-400 group-hover:text-white group-hover:opacity-100" />
                                     </a>
 
-                                    <button 
+                                    <button
                                         onClick={handleCopy}
                                         className="flex items-center justify-between p-3 rounded-xl bg-secondary/5 hover:bg-secondary hover:text-white transition-all group cursor-pointer"
                                     >
