@@ -173,6 +173,9 @@ ${formData.fullName}
                                     >
                                         <option>Residential Luxury</option>
                                         <option>Commercial Spaces</option>
+                                        <option>Rental Properties</option>
+                                        <option>Land / Plots</option>
+                                        <option>Resell Properties</option>
                                         <option>New Project Launch</option>
                                         <option>Marketing Partnership</option>
                                     </select>
