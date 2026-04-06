@@ -76,6 +76,15 @@ export default function Navbar() {
                     </NavLink>
 
                     <NavLink
+                        to="/rent-resell"
+                        className={({ isActive }) =>
+                            `text-sm font-semibold transition-colors hover:text-accent ${isActive ? 'text-accent border-b-2 border-accent' : 'text-primary'}`
+                        }
+                    >
+                        Rent/Resell
+                    </NavLink>
+
+                    <NavLink
                         to="/contact"
                         className={({ isActive }) =>
                             `text-sm font-semibold transition-colors hover:text-accent ${isActive ? 'text-accent border-b-2 border-accent' : 'text-primary'}`
@@ -148,6 +157,14 @@ export default function Navbar() {
                             className={({ isActive }) => `text-xl font-display font-bold ${isActive ? 'text-accent' : 'text-primary'}`}
                         >
                             Projects
+                        </NavLink>
+
+                        <NavLink
+                            to="/rent-resell"
+                            onClick={() => setIsOpen(false)}
+                            className={({ isActive }) => `text-xl font-display font-bold ${isActive ? 'text-accent' : 'text-primary'}`}
+                        >
+                            Rent/Resell
                         </NavLink>
 
                         <NavLink
