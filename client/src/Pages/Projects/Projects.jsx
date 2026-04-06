@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import ProjectCard from '../../Components/UI/ProjectCard';
@@ -13,6 +14,10 @@ import anandVillaCover from '../../assets/anand_villa/anand_villa_page_0001.jpg'
 import ns10Cover from '../../assets/ns10/E1_FINAL02.jpg';
 
 export default function Projects() {
+    const [activeTab, setActiveTab] = useState('All Projects');
+    
+    const tabs = ['All Projects', 'Ongoing Projects', 'Rent/Resell'];
+
     const projects = [
         {
             id: "ns10",
@@ -109,16 +114,48 @@ export default function Projects() {
                     </p>
                 </div>
 
-                {/* Projects Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {projects.map((project, index) => (
-                        <ProjectCard 
-                            key={project.id}
-                            {...project}
-                            index={index}
-                        />
+                {/* Tabs */}
+                <div className="flex flex-wrap gap-4 mb-12 animate-fadeIn delay-300">
+                    {tabs.map(tab => (
+                        <button
+                            key={tab}
+                            onClick={() => setActiveTab(tab)}
+                            className={`px-6 py-2 rounded-full font-bold text-xs uppercase tracking-widest transition-all cursor-pointer ${
+                                activeTab === tab 
+                                ? 'bg-primary text-white shadow-xl' 
+                                : 'bg-white text-primary/60 border border-primary/10 hover:border-primary/30 hover:text-primary'
+                            }`}
+                        >
+                            {tab}
+                        </button>
                     ))}
                 </div>
+
+                {/* Projects Grid */}
+                <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <AnimatePresence mode="popLayout">
+                        {projects.filter(project => {
+                            if (activeTab === 'All Projects') return true;
+                            if (activeTab === 'Rent/Resell') return project.id === 'embee-delight';
+                            if (activeTab === 'Ongoing Projects') return project.id !== 'embee-delight';
+                            return true;
+                        }).map((project, index) => (
+                            <motion.div
+                                layout
+                                key={project.id}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.9 }}
+                                transition={{ duration: 0.3 }}
+                            >
+                                <ProjectCard 
+                                    {...project}
+                                    index={index}
+                                />
+                            </motion.div>
+                        ))}
+                    </AnimatePresence>
+                </motion.div>
 
             </div>
         </div>
