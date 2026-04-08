@@ -15,14 +15,14 @@ import utsodharaImg from '../../../assets/utsodhara/Utsodhaara-Brochure_page-000
 import rightAngleImg from '../../../assets/RIGHT ANGLE BROCHURE/RIGHT ANGLE BROCHURE V2_page-0001.jpg';
 import sensesImg from '../../../assets/senses/The SENSES_page-0001.jpg';
 import ramVatikaImg from '../../../assets/ramvatika/Ram Vatika_page-0001.jpg';
-import ns10Cover from '../../../assets/ns10/E1_FINAL02.jpg';
+import nh10Cover from '../../../assets/nh10/E1_FINAL02.jpg';
 
 const projects = [
     {
-        id: "ns10",
-        name: "NS10",
+        id: "nh10",
+        name: "NH10",
         location: "Siliguri, India",
-        image: ns10Cover,
+        image: nh10Cover,
         category: "Commercial Landmark",
         description: "A futuristic commercial hub redefining business excellence in Siliguri."
     },
