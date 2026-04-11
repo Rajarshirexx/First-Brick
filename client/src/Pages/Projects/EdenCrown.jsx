@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ProjectEnquiry from '../../Components/UI/ProjectEnquiry';
 import { motion } from 'framer-motion';
-import { FiDownload, FiMapPin, FiCheckCircle } from 'react-icons/fi';
+import { FiDownload, FiMapPin, FiCheckCircle, FiHome, FiMaximize, FiGrid, FiTag } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 
 // Asset Imports
@@ -25,6 +25,13 @@ export default function EdenCrown() {
         "Architectural Excellence", "Premium Amenities",
         "Lush Green Surroundings", "Strategic Connectivity",
         "Elite Community", "24/7 Security"
+    ];
+
+    const projectEssentials = [
+        { label: "Starting Price", value: "₹3,500/sq ft*", icon: <FiTag /> },
+        { label: "Location", value: "Siliguri, India", icon: <FiMapPin /> },
+        { label: "Project Area", value: "1500 - 2200 sqft", icon: <FiMaximize /> },
+        { label: "Configuration", value: "3 BHK, 4 BHK", icon: <FiGrid /> }
     ];
 
     return (
@@ -79,6 +86,29 @@ export default function EdenCrown() {
                             </a>
                         </div>
                     </motion.div>
+                </div>
+            </section>
+
+            {/* Project Essentials Section */}
+            <section className="bg-white border-b border-[#5a4a42]/5 py-12">
+                <div className="container mx-auto px-6">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                        {projectEssentials.map((item, i) => (
+                            <div key={i} className="flex items-start gap-4 group">
+                                <div className="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary text-xl shrink-0 group-hover:bg-secondary group-hover:text-white transition-all duration-500">
+                                    {item.icon}
+                                </div>
+                                <div className="space-y-1">
+                                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#2d241f]/40 block">
+                                        {item.label}
+                                    </span>
+                                    <span className="text-[#2d241f] font-bold text-base lg:text-lg leading-tight block">
+                                        {item.value}
+                                    </span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
 

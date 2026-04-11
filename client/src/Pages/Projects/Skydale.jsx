@@ -7,8 +7,16 @@ import brochurePage2 from '../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-
 import brochurePage3 from '../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0003.jpg';
 import brochurePage6 from '../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0006.jpg';
 import brochurePage10 from '../../assets/skydale/SKYDALE E-BROCHURE REVISED_page-0010.jpg';
+import { FiMapPin, FiHome, FiMaximize, FiGrid, FiTag } from 'react-icons/fi';
 
 export default function Skydale() {
+    const projectEssentials = [
+        { label: "Starting Price", value: "₹1.22 Crores*", icon: <FiTag /> },
+        { label: "Location", value: "Uttorayon, Siliguri", icon: <FiMapPin /> },
+        { label: "Project Area", value: "1800 - 2500 sqft", icon: <FiMaximize /> },
+        { label: "Configuration", value: "3 BHK, 4 BHK", icon: <FiGrid /> }
+    ];
+
     const amenities = [
         { icon: "🏊‍♂️", title: "Swimming Pool" },
         { icon: "🏸", title: "Sports Arcade" },
@@ -46,6 +54,29 @@ export default function Skydale() {
                 {/* Decorative Element */}
                 <div className="absolute right-0 bottom-0 top-0 w-1/3 bg-white/5 skew-x-[-15deg] translate-x-1/2"></div>
             </div>
+
+            {/* Project Essentials Section */}
+            <section className="bg-white border-b border-[#083333]/5 py-12">
+                <div className="container mx-auto px-6">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                        {projectEssentials.map((item, i) => (
+                            <div key={i} className="flex items-start gap-4 group">
+                                <div className="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary text-xl shrink-0 group-hover:bg-secondary group-hover:text-white transition-all duration-500">
+                                    {item.icon}
+                                </div>
+                                <div className="space-y-1">
+                                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#083333]/40 block">
+                                        {item.label}
+                                    </span>
+                                    <span className="text-[#083333] font-bold text-base lg:text-lg leading-tight block">
+                                        {item.value}
+                                    </span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
             {/* Architectural Showcase Section */}
             <div className="relative group overflow-hidden">

@@ -22,6 +22,9 @@ const projects = [
         id: "nh10",
         name: "NH10",
         location: "Siliguri, India",
+        area: "Commercial Hub",
+        bhk: "Premium Corporate Suites",
+        startingPrice: "18.00 Lacs*",
         image: nh10Cover,
         category: "Commercial Landmark",
         description: "A futuristic commercial hub redefining business excellence in Siliguri."
@@ -30,6 +33,9 @@ const projects = [
         id: "embee-delight",
         name: "Embee Delight",
         location: "Siliguri, WB",
+        area: "1100 - 1800 sqft",
+        bhk: "1, 2, 3 & 4 BHK",
+        startingPrice: "31.91 Lacs*",
         image: embeeImg,
         category: "Luxury Apartments",
         description: "A beacon of modern residential architecture redefining urban living standards."
@@ -37,7 +43,10 @@ const projects = [
     {
         id: "skydale",
         name: "Skydale",
-        location: "Siliguri, WB",
+        location: "Uttorayon, Siliguri",
+        area: "1800 - 2500 sqft",
+        bhk: "3 BHK, 4 BHK",
+        startingPrice: "1.22 Crores*",
         image: skydaleImg,
         category: "Ultra-Luxury Towers",
         description: "Siliguri's tallest residential towers, soaring into the elite skies of North Bengal."
@@ -45,7 +54,10 @@ const projects = [
     {
         id: "utsodhara",
         name: "Utsodhaara",
-        location: "Siliguri, WB",
+        location: "Naukaghat, Siliguri",
+        area: "1621 - 2142 sqft",
+        bhk: "3 BHK, 4 BHK",
+        startingPrice: "1.15 Crores*",
         image: utsodharaImg,
         category: "Integrated Township",
         description: "An 81-acre sustainable ecosystem redefining modern town planning."
@@ -53,7 +65,10 @@ const projects = [
     {
         id: "right-angle",
         name: "Right Angle",
-        location: "Siliguri, WB",
+        location: "Siliguri, India",
+        area: "Flexible Retail Space",
+        bhk: "Commercial / Retail",
+        startingPrice: "95.00 Lacs*",
         image: rightAngleImg,
         category: "Commercial/Retail",
         description: "The perfect intersection of ambition and lifestyle. A landmark commercial destination."
@@ -61,7 +76,10 @@ const projects = [
     {
         id: "the-senses",
         name: "The Senses",
-        location: "Siliguri, WB",
+        location: "Siliguri, India",
+        area: "1200 - 1800 sqft",
+        bhk: "1, 2, 3 BHK",
+        startingPrice: "31.88 Lacs*",
         image: sensesImg,
         category: "Premium Residential",
         description: "A rainbow of infinite hues. A 7.4-acre residential sanctuary with 60% open space."
@@ -69,7 +87,11 @@ const projects = [
     {
         id: "ram-vatika",
         name: "Ram Vatika",
-        location: "Siliguri, WB",
+        location: "Siliguri, India",
+        developer: "Residential Haven",
+        area: "1100 - 1500 sqft",
+        bhk: "2 BHK, 3 BHK",
+        startingPrice: "45.00 Lacs*",
         image: ramVatikaImg,
         category: "Premium Residential",
         description: "A serene residential haven offering modern comfort and elegant living spaces."

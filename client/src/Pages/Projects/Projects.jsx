@@ -23,6 +23,9 @@ export default function Projects() {
             id: "nh10",
             name: "NH10",
             location: "Siliguri, India",
+            area: "Commercial Hub",
+            bhk: "Premium Corporate Suites",
+            startingPrice: "18.00 Lacs*",
             category: "Commercial Landmark",
             image: nh10Cover,
             description: "A futuristic commercial hub redefining business excellence in Siliguri."
@@ -30,7 +33,10 @@ export default function Projects() {
         {
             id: "embee-delight",
             name: "Embee Delight",
-            location: "Siliguri, India",
+            location: "Siliguri, WB",
+            area: "1100 - 1800 sqft",
+            bhk: "1, 2, 3 & 4 BHK",
+            startingPrice: "31.91 Lacs*",
             category: "Residential Luxury",
             image: project1,
             description: "A beacon of modern residential architecture redefining urban living standards."
@@ -38,7 +44,10 @@ export default function Projects() {
         {
             id: "skydale",
             name: "Skydale",
-            location: "Siliguri, India",
+            location: "Uttorayon, Siliguri",
+            area: "1800 - 2500 sqft",
+            bhk: "3 BHK, 4 BHK",
+            startingPrice: "1.22 Crores*",
             category: "Ultra-Luxury Residential",
             image: skydaleCover,
             description: "Siliguri's tallest residential towers, soaring into the elite skies of North Bengal."
@@ -46,7 +55,10 @@ export default function Projects() {
         {
             id: "utsodhara",
             name: "Utsodhaara",
-            location: "Siliguri, India",
+            location: "Naukaghat, Siliguri",
+            area: "1621 - 2142 sqft",
+            bhk: "3 BHK, 4 BHK",
+            startingPrice: "1.15 Crores*",
             category: "Integrated Township",
             image: utsodharaCover,
             description: "An 81-acre sustainable ecosystem redefining modern town planning."
@@ -55,6 +67,9 @@ export default function Projects() {
             id: "right-angle",
             name: "Right Angle",
             location: "Siliguri, India",
+            area: "Flexible Retail Space",
+            bhk: "Commercial / Retail",
+            startingPrice: "95.00 Lacs*",
             category: "Commercial / Retail",
             image: rightAngleCover,
             description: "The perfect intersection of ambition and lifestyle. A landmark commercial destination."
@@ -63,6 +78,9 @@ export default function Projects() {
             id: "the-senses",
             name: "The Senses",
             location: "Siliguri, India",
+            area: "1200 - 1800 sqft",
+            bhk: "1, 2, 3 BHK",
+            startingPrice: "31.88 Lacs*",
             category: "Premium Residential",
             image: sensesCover,
             description: "A rainbow of infinite hues. A 7.4-acre residential sanctuary with 60% open space."
@@ -71,6 +89,9 @@ export default function Projects() {
             id: "ram-vatika",
             name: "Ram Vatika",
             location: "Siliguri, India",
+            area: "1100 - 1500 sqft",
+            bhk: "2 BHK, 3 BHK",
+            startingPrice: "45.00 Lacs*",
             category: "Premium Residential",
             image: ramVatikaCover,
             description: "A serene residential haven offering modern comfort and elegant living spaces."
@@ -79,6 +100,9 @@ export default function Projects() {
             id: "eden-crown",
             name: "Eden Crown",
             location: "Siliguri, India",
+            area: "1500 - 2200 sqft",
+            bhk: "3 BHK, 4 BHK",
+            startingPrice: "3,500/sq ft*",
             category: "Premium Residential",
             image: edenCrownCover,
             description: "A masterfully crafted residential project offering elite living and architectural brilliance."
@@ -87,6 +111,9 @@ export default function Projects() {
             id: "anand-villa",
             name: "Anand Villa",
             location: "Siliguri, India",
+            area: "1300 - 1900 sqft",
+            bhk: "2 BHK, 3 BHK",
+            startingPrice: "54.79 Lacs*",
             category: "Premium Residential",
             image: anandVillaCover,
             description: "Experience the joy of a perfect home. Modern luxury meets timeless comfort."

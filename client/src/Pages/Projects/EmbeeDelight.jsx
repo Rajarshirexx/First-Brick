@@ -8,6 +8,7 @@ import brochurePage6 from '../../assets/embee/EMBEE_DELIGHT_BROCHURE_page-0006.j
 import brochurePage8 from '../../assets/embee/EMBEE_DELIGHT_BROCHURE_page-0008.jpg';
 import brochurePage10 from '../../assets/embee/EMBEE_DELIGHT_BROCHURE_page-0010.jpg';
 import brochurePage12 from '../../assets/embee/EMBEE_DELIGHT_BROCHURE_page-0012.jpg';
+import { FiMapPin, FiHome, FiMaximize, FiGrid, FiTag } from 'react-icons/fi';
 
 export default function EmbeeDelight() {
     const amenities = [
@@ -17,6 +18,12 @@ export default function EmbeeDelight() {
         { title: "20,000 sqft Clubhouse", icon: "🏠" },
         { title: "Power Backup", icon: "⚡" },
         { title: "24/7 Security", icon: "🛡️" }
+    ];
+    const projectEssentials = [
+        { label: "Starting Price", value: "₹31.91 Lacs*", icon: <FiTag /> },
+        { label: "Location", value: "Siliguri, WB", icon: <FiMapPin /> },
+        { label: "Project Area", value: "1100 - 1800 sqft", icon: <FiMaximize /> },
+        { label: "Configuration", value: "1, 2, 3 & 4 BHK", icon: <FiGrid /> }
     ];
 
     return (
@@ -54,6 +61,29 @@ export default function EmbeeDelight() {
                 {/* Decorative Element */}
                 <div className="absolute right-0 bottom-0 top-0 w-1/3 bg-white/5 skew-x-[-15deg] translate-x-1/2"></div>
             </div>
+
+            {/* Project Essentials Section */}
+            <section className="bg-white border-b border-primary/5 py-12">
+                <div className="container mx-auto px-6">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                        {projectEssentials.map((item, i) => (
+                            <div key={i} className="flex items-start gap-4 group">
+                                <div className="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary text-xl shrink-0 group-hover:bg-secondary group-hover:text-white transition-all duration-500">
+                                    {item.icon}
+                                </div>
+                                <div className="space-y-1">
+                                    <span className="text-[10px] font-bold uppercase tracking-widest text-primary/40 block">
+                                        {item.label}
+                                    </span>
+                                    <span className="text-primary font-bold text-base lg:text-lg leading-tight block">
+                                        {item.value}
+                                    </span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
             {/* Aerial Showcase Section */}
             <div className="relative group overflow-hidden">

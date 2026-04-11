@@ -1,51 +1,75 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FiMapPin, FiHome, FiMaximize, FiGrid, FiArrowUpRight } from 'react-icons/fi';
 
-export default function ProjectCard({ id, name, location, category, image, description, index }) {
+export default function ProjectCard({ 
+    id, 
+    name, 
+    location, 
+    area, 
+    bhk, 
+    startingPrice, 
+    image, 
+    index 
+}) {
     return (
         <Link 
             to={`/projects/${id}`} 
-            className="group block bg-white rounded-[2.5rem] overflow-hidden shadow-2xl border border-primary/5 hover:shadow-placeholder transition-all duration-700 animate-fadeIn"
+            className="group block bg-white rounded-[1.5rem] overflow-hidden shadow-xl border border-primary/5 hover:shadow-2xl transition-all duration-500 animate-fadeIn"
             style={{ animationDelay: `${index * 150}ms` }}
         >
-            {/* Visual Header */}
-            <div className="relative aspect-[4/3] overflow-hidden">
+            {/* Project Image */}
+            <div className="relative aspect-[16/10] overflow-hidden">
                 <img 
                     src={image} 
                     alt={name} 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
-                
-                {/* Floating Tag */}
-                <div className="absolute top-8 left-8">
-                    <span className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-[0.3em] text-primary shadow-sm">
-                        {category}
-                    </span>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
 
-            {/* Content Body */}
-            <div className="p-7 space-y-4">
-                <div>
-                    <h3 className="text-2xl font-display font-bold text-primary mb-1 group-hover:text-secondary transition-colors duration-500">
+            {/* Content Area */}
+            <div className="p-6 space-y-5">
+                {/* Header: Name and Price */}
+                <div className="flex justify-between items-start gap-4">
+                    <h3 className="text-xl font-display font-bold text-primary uppercase leading-tight group-hover:text-secondary transition-colors duration-500">
                         {name}
                     </h3>
-                    <div className="flex items-center gap-2 text-primary/40 text-[9px] font-bold uppercase tracking-widest">
-                        <span className="text-secondary italic">●</span> {location}
-                    </div>
+                    {startingPrice && (
+                        <div className="text-right shrink-0">
+                            <div className="text-[10px] text-muted font-bold uppercase tracking-wider">Starting</div>
+                            <div className="text-primary font-bold text-base">₹{startingPrice}</div>
+                        </div>
+                    )}
                 </div>
 
-                <p className="text-muted text-[13px] leading-relaxed font-medium italic opacity-80 line-clamp-2">
-                    "{description}"
-                </p>
+                {/* Bullet Points Grid */}
+                <div className="space-y-3 pt-2">
+                    <div className="flex items-center gap-3 text-primary/60">
+                        <FiMapPin className="text-secondary shrink-0" />
+                        <span className="text-[13px] font-medium truncate">{location}</span>
+                    </div>
+                    {area && (
+                        <div className="flex items-center gap-3 text-primary/60">
+                            <FiMaximize className="text-secondary shrink-0" />
+                            <span className="text-[13px] font-medium truncate">{area} (Super Builtup)</span>
+                        </div>
+                    )}
+                    {bhk && (
+                        <div className="flex items-center gap-3 text-primary/60">
+                            <FiGrid className="text-secondary shrink-0" />
+                            <span className="text-[13px] font-medium truncate">{bhk}</span>
+                        </div>
+                    )}
+                </div>
 
-                <div className="pt-4 flex items-center justify-between border-t border-primary/5">
-                    <span className="text-primary font-bold text-[10px] uppercase tracking-[0.4em]">
-                        View Details
-                    </span>
-                    <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-all duration-500">
-                        <span className="group-hover:translate-x-1 transition-transform">→</span>
+                {/* Footer: Explore Button */}
+                <div className="pt-4 flex items-center justify-end">
+                    <div className="flex items-center gap-3 text-primary font-bold text-sm tracking-wide group/btn">
+                        <span>Explore</span>
+                        <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-white transform group-hover/btn:translate-x-1 transition-all duration-300 shadow-lg shadow-secondary/20">
+                            <FiArrowUpRight />
+                        </div>
                     </div>
                 </div>
             </div>

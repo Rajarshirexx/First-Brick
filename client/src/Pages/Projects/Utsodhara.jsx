@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ProjectEnquiry from '../../Components/UI/ProjectEnquiry';
 import { Link } from 'react-router-dom';
+import { FiMapPin, FiHome, FiMaximize, FiGrid, FiTag } from 'react-icons/fi';
 
 // Asset Imports
 import utsodharaHero from '../../assets/utsodhara/Utsodhaara-Brochure_page-0008.jpg';
@@ -32,6 +33,13 @@ export default function Utsodhara() {
         { label: "Power Facility", detail: "Dedicated Substations", icon: "⚡" },
         { label: "Water Supply", detail: "Treated Potable Water", icon: "💧" },
         { label: "Drainage", detail: "Efficient SWM System", icon: "🏗️" }
+    ];
+
+    const projectEssentials = [
+        { label: "Starting Price", value: "₹1.15 Crores*", icon: <FiTag /> },
+        { label: "Location", value: "Naukaghat, Siliguri", icon: <FiMapPin /> },
+        { label: "Project Area", value: "1621 - 2142 sqft", icon: <FiMaximize /> },
+        { label: "Configuration", value: "3 BHK, 4 BHK", icon: <FiGrid /> }
     ];
 
     return (
@@ -69,6 +77,29 @@ export default function Utsodhara() {
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
                 </div>
             </div>
+
+            {/* Project Essentials Section */}
+            <section className="bg-white border-b border-primary/5 py-12">
+                <div className="container mx-auto px-6">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                        {projectEssentials.map((item, i) => (
+                            <div key={i} className="flex items-start gap-4 group">
+                                <div className="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary text-xl shrink-0 group-hover:bg-secondary group-hover:text-white transition-all duration-500">
+                                    {item.icon}
+                                </div>
+                                <div className="space-y-1">
+                                    <span className="text-[10px] font-bold uppercase tracking-widest text-primary/40 block">
+                                        {item.label}
+                                    </span>
+                                    <span className="text-primary font-bold text-base lg:text-lg leading-tight block">
+                                        {item.value}
+                                    </span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
             {/* Main Content Area */}
             <div className="container px-6 py-24">
