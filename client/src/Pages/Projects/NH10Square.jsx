@@ -6,12 +6,12 @@ import { FiDownload, FiMapPin, FiCheckCircle, FiClock, FiHome, FiMaximize, FiGri
 import { FaWhatsapp } from 'react-icons/fa';
 
 // Asset Imports
-import nh10Hero from '../../assets/nh10/A_1_FINAL02.png';
-import nh10Lobby from '../../assets/nh10/LOBBY_01_FINAL02.png';
-import nh10Corridor from '../../assets/nh10/CORRIDOR_FINAL.png';
-import nh10Elevation from '../../assets/nh10/E4_FINAL02.jpg';
+import nh10Hero from '../../assets/nh10-square/A_1_FINAL02.png';
+import nh10Lobby from '../../assets/nh10-square/LOBBY_01_FINAL02.png';
+import nh10Corridor from '../../assets/nh10-square/CORRIDOR_FINAL.png';
+import nh10Elevation from '../../assets/nh10-square/E4_FINAL02.jpg';
 
-export default function NH10() {
+export default function NH10Square() {
     const highlights = [
         { title: "Project Type", detail: "Commercial Hub", icon: "🏢" },
         { title: "Status", detail: "New Launch", icon: "🚀" },
@@ -35,8 +35,8 @@ export default function NH10() {
     return (
         <div className="bg-[#f8fafb] min-h-screen">
             <Helmet>
-                <title>NH10 | The Future of Commercial Excellence | First Brick Properties</title>
-                <meta name="description" content="Discover NH10, a landmark commercial project by First Brick Properties. Redefining modern business spaces with state-of-the-art infrastructure." />
+                <title>NH-10 Square | The Future of Commercial Excellence | First Brick Properties</title>
+                <meta name="description" content="Discover NH-10 Square, a landmark commercial project by First Brick Properties. Redefining modern business spaces with state-of-the-art infrastructure." />
             </Helmet>
 
             {/* Hero Section */}
@@ -47,7 +47,7 @@ export default function NH10() {
                     transition={{ duration: 1.5 }}
                     className="absolute inset-0 z-0"
                 >
-                    <img src={nh10Hero} alt="NH10 Hero" className="w-full h-full object-cover" />
+                    <img src={nh10Hero} alt="NH-10 Square Hero" className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent"></div>
                 </motion.div>
 
@@ -61,7 +61,7 @@ export default function NH10() {
                             <FiMapPin /> Strategic Business Hub, Siliguri
                         </div>
                         <h1 className="text-6xl md:text-8xl font-display font-bold text-white leading-tight">
-                            NH<span className="text-secondary">10</span>
+                            NH-10 <span className="text-secondary">Square</span>
                         </h1>
                         <p className="text-white/90 text-xl font-medium max-w-xl leading-relaxed">
                             A Futuristic Commercial Landmark. Experience a workspace that goes beyond boundaries in our meticulously designed corporate sanctuary.
@@ -73,7 +73,7 @@ export default function NH10() {
                                 <FiClock /> Brochure Coming Soon
                             </div>
                             <a 
-                                href="https://wa.me/918371874510?text=I'm%20interested%20in%20the%20NH10%20project.%20Please%20provide%20more%20details." 
+                                href="https://wa.me/918371874510?text=I'm%20interested%20in%20the%20NH-10%20Square%20project.%20Please%20provide%20more%20details." 
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="bg-[#25D366] hover:bg-[#20bd5c] text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 transition-all lg:text-base text-sm shadow-xl shadow-[#25D366]/20"
@@ -135,7 +135,7 @@ export default function NH10() {
                             <div className="text-secondary font-bold text-[10px] uppercase tracking-[0.4em]">Modern Infrastructure</div>
                             <h2 className="text-5xl font-display font-bold text-primary leading-tight">Elevating Business <br /> Expectations</h2>
                             <p className="text-muted text-lg leading-relaxed max-w-lg">
-                                NH10 is designed to fulfill the aspirations of forward-thinking businesses. Every square foot of this magnificent work of art is crafted to enhance productivity and project an image of global excellence.
+                                NH-10 Square is designed to fulfill the aspirations of forward-thinking businesses. Every square foot of this magnificent work of art is crafted to enhance productivity and project an image of global excellence.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {keyFeatures.map((feature, i) => (
@@ -167,7 +167,7 @@ export default function NH10() {
                         <div className="lg:col-span-5 p-12 md:p-20 flex flex-col justify-center space-y-8 bg-primary text-white">
                             <h3 className="text-4xl font-display font-bold">Uncompromising <br />Business Environment</h3>
                             <p className="text-white/60 leading-relaxed font-medium">
-                                With NH10, we are creating an ecosystem where networking meets privacy. It's more than just a building; it's a statement of ambition and high-impact corporate culture.
+                                With NH-10 Square, we are creating an ecosystem where networking meets privacy. It's more than just a building; it's a statement of ambition and high-impact corporate culture.
                             </p>
                             <div className="space-y-4 pt-4 border-t border-white/10">
                                 <div className="flex justify-between">
@@ -191,10 +191,10 @@ export default function NH10() {
                 <div className="mt-32 pt-24 border-t border-primary/10 text-center space-y-10">
                     <div className="max-w-2xl mx-auto space-y-4">
                         <h2 className="text-4xl md:text-6xl font-display font-bold text-primary">Be Part of the <br /> Future Landmark</h2>
-                        <p className="text-muted font-medium italic">Join the elite corporate community at NH10 today.</p>
+                        <p className="text-muted font-medium italic">Join the elite corporate community at NH-10 Square today.</p>
                     </div>
                     <div className="max-w-xl mx-auto space-y-12 pb-20">
-                        <ProjectEnquiry projectName="NH10" accentColor="#C17053" />
+                        <ProjectEnquiry projectName="NH-10 Square" accentColor="#C17053" />
                     </div>
                 </div>
             </section>

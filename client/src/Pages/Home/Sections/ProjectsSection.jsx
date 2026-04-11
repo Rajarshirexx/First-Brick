@@ -15,17 +15,17 @@ import utsodharaImg from '../../../assets/utsodhara/Utsodhaara-Brochure_page-000
 import rightAngleImg from '../../../assets/RIGHT ANGLE BROCHURE/RIGHT ANGLE BROCHURE V2_page-0001.jpg';
 import sensesImg from '../../../assets/senses/The SENSES_page-0001.jpg';
 import ramVatikaImg from '../../../assets/ramvatika/Ram Vatika_page-0001.jpg';
-import nh10Cover from '../../../assets/nh10/E1_FINAL02.jpg';
+import nh10SquareCover from '../../../assets/nh10-square/E1_FINAL02.jpg';
 
 const projects = [
     {
-        id: "nh10",
-        name: "NH10",
+        id: "nh-10-square",
+        name: "NH-10 Square",
         location: "Siliguri, India",
         area: "Commercial Hub",
         bhk: "Premium Corporate Suites",
         startingPrice: "18.00 Lacs*",
-        image: nh10Cover,
+        image: nh10SquareCover,
         category: "Commercial Landmark",
         description: "A futuristic commercial hub redefining business excellence in Siliguri."
     },

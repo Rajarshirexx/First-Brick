@@ -17,7 +17,7 @@ import Senses from './Pages/Projects/Senses';
 import RamVatika from './Pages/Projects/RamVatika';
 import EdenCrown from './Pages/Projects/EdenCrown';
 import AnandVilla from './Pages/Projects/AnandVilla';
-import NH10 from './Pages/Projects/NH10';
+import NH10Square from './Pages/Projects/NH10Square';
 import RentResell from './Pages/RentResell/RentResell';
 import Contact from './Pages/Contact/Contact';
 import './App.css';
@@ -42,7 +42,7 @@ function App() {
             <Route path="/projects/ram-vatika" element={<RamVatika />} />
             <Route path="/projects/eden-crown" element={<EdenCrown />} />
             <Route path="/projects/anand-villa" element={<AnandVilla />} />
-            <Route path="/projects/nh10" element={<NH10 />} />
+            <Route path="/projects/nh-10-square" element={<NH10Square />} />
             <Route path="/rent-resell" element={<RentResell />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

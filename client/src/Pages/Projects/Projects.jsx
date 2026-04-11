@@ -11,7 +11,7 @@ import sensesCover from '../../assets/senses/The SENSES_page-0001.jpg';
 import ramVatikaCover from '../../assets/ramvatika/Ram Vatika_page-0001.jpg';
 import edenCrownCover from '../../assets/eden_crown/eden_crown_page_0001.jpg';
 import anandVillaCover from '../../assets/anand_villa/anand_villa_page_0001.jpg';
-import nh10Cover from '../../assets/nh10/E1_FINAL02.jpg';
+import nh10SquareCover from '../../assets/nh10-square/E1_FINAL02.jpg';
 
 export default function Projects() {
     const [activeTab, setActiveTab] = useState('All Projects');
@@ -20,14 +20,14 @@ export default function Projects() {
 
     const projects = [
         {
-            id: "nh10",
-            name: "NH10",
+            id: "nh-10-square",
+            name: "NH-10 Square",
             location: "Siliguri, India",
             area: "Commercial Hub",
             bhk: "Premium Corporate Suites",
             startingPrice: "18.00 Lacs*",
             category: "Commercial Landmark",
-            image: nh10Cover,
+            image: nh10SquareCover,
             description: "A futuristic commercial hub redefining business excellence in Siliguri."
         },
         {
